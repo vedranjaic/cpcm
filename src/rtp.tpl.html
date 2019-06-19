@@ -1,0 +1,128 @@
+@@include('assets/components/_head.html')
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	
+	<div class="container">
+		
+		@@include('assets/components/_navbar.html')
+		
+		@@include('assets/components/_navbar-tabs.html')
+		
+		
+		<div class="content-container">
+			
+			<div class="content">
+				
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="RTPSearch">
+
+						<div class="page-content page-sidebar--true">
+
+							<section class="panel panel-page">
+
+								<header class="panel-header">
+									<h4 class="section-title">Search Tax Payers</h4>
+
+									<ul class="page-section--actions nav-tabs" role="tablist" id="searchTabs">
+										<li role="presentation" class="active">
+											<a href="#dashboard" id="tabSearchSimple">
+												<span>Simple search</span>
+											</a>
+										</li>
+										<li role="presentation" class="">
+											<a href="#users" id="tabSearchAdvanced">
+												<span>Advanced search</span>
+											</a>
+										</li>
+									</ul>
+									<!-- /.nav-tabs -->
+								</header>
+
+								<div class="panel-body">
+
+									@@include('assets/components/_pages/rtp/_search.html')
+
+								</div>
+								<!-- /.section-body -->
+							</section>
+							<!-- /.panel -->
+
+							@@include('assets/components/page/_page-sidebar.html', {
+								"page-sidebar--heading-hidden": "hidden"
+							})
+
+
+						</div>
+						<!-- /.page-content -->
+
+						<div class="page-content" id="demo-page-search-results">
+
+							<section class="panel panel-page">
+
+								<header class="panel-header panel-header--sticky">
+									<h4 class="section-title">Search Results</h4>
+		
+									<ul class="panel-header--actions list-inline">
+										<li>
+											<a href="#" class="btn btn-primary" id="filter-modal"><i class="icon fa fa-clone"></i> Compare selected</a>
+										</li>
+										<li>
+											<a href="#" class="btn btn-dark"><i class="icon fa fa-download"></i> Export to .xls</a>
+										</li>
+									</ul>
+								</header>
+								<!-- /.panel-header -->
+
+								<div class="panel-body">
+
+									@@include('assets/components/table/_table.html', {
+										"table-class": "table table-hover"
+									})
+
+									@@include('assets/components/table/_table-footer.html', {
+										"help-text--hidden": "",
+										"pagination--hidden": ""
+									})
+			
+								</div>
+								<!-- /.section-body -->
+
+							</section>
+							<!-- /.panel -->
+				
+		
+							@@include('assets/components/page/_page-sidebar-profile.html', {
+								"page-sidebar--heading-hidden": "hidden"
+							})
+												
+						</div>
+						<!-- /.page-content -->
+
+
+					</div>
+					<div role="tabpanel" class="tab-pane" id="RTPCatalog">
+						Catalog
+					</div>
+					<!-- /.tab-pane -->
+				</div>
+				<!-- /.tab-content -->
+
+			</div>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-container -->
+
+	</div>
+	<!-- /.container -->
+
+
+
+
+
+	@@include('assets/components/modal/_modal.html')
+
+
+@@include('assets/components/_footer.html')

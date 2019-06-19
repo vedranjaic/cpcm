@@ -1,0 +1,484 @@
+<section class="page-section">
+
+    <header class="section-header">
+        <h2 class="section-title">Page section title</h2>
+
+        <ul class="page-section--actions list-inline">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle btn btn-primary btn-sm">Action</a>
+                <ul class="dropdown-menu dropdown-menu--right">
+                    <li>
+                        <a href="#">Sample action</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- /.section-header -->
+
+    <div class="section-body">
+
+        <form action="#">
+    
+            <div class="form-group form-column">
+                <label for="button">Button</label>
+                <input type="button" id="button" value="Input button" class="btn btn-primary">
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" checked>
+                <label for="checkbox">Checkbox</label>
+            </div>
+            <!-- /.form-checkbox -->
+        
+            <div class="form-group form-column">
+                <label for="color">Color picker</label>
+                <input type="color" class="form-element" id="color" name="color" value="#e66465">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="date">Date</label>
+                <input type="date" class="form-element" id="date" name="trip-date" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="date-time">Date and time</label>
+                <input type="datetime-local" class="form-element" id="date-time" name="date-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-element" id="email" pattern=".+@neos.hr" size="30" placeholder="@neos.hr" required>
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="file">Choose file</label>
+                <input type="file" class="form-element" id="file" name="file" accept="image/png, image/jpeg" capture="user">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="image">Input button with image</label>
+                <input type="image" id="image" alt="Login" src="http://placehold.it/100x50">
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="month">Month</label>
+                <input type="month" class="form-element" id="month" name="month" min="2018-03" value="2018-05">
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="number">Number (10-100)</label>
+                <input type="number" class="form-element" id="number" name="number" min="10" max="100">
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="password">Password (8 characters minimum)</label>
+                <input type="password" class="form-element" id="password" name="password" minlength="8" aria-describedby="passwordHelpBlock" required>
+                <small id="passwordHelpBlock" class="help-text">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+                    characters, or emoji.
+                </small>
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-radio">
+                <input type="radio" id="radio1" name="radio-example" value="radio1" >
+                <label for="radio1">Radio 1</label>
+            </div>
+            <!-- /.form-check -->
+
+            <div class="form-radio">
+                <input type="radio" id="radio2" name="radio-example" value="radio2" >
+                <label for="radio2">Radio 2</label>
+            </div>
+            <!-- /.form-check -->
+        
+            <div class="form-group form-column">
+                <label for="range">Range</label>
+                <input type="range" class="form-element" id="range" name="range" min="0" max="100" value="90" step="10">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="reset">Reset</label>
+                <input type="reset" id="reset" class="btn btn-info" value="Reset">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="search">Search</label>
+                <input type="search" class="form-element" id="search" name="search" aria-label="Search">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="submit">Submit</label>
+                <input type="submit" id="submit" class="btn btn-success" value="Submit">
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-element" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small class="help-text">Format: 123-456-7890</small>
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="name">Text (4 to 8 characters):</label>
+                <input type="text" class="form-element" id="name" name="name" required minlength="4" maxlength="8" size="10">
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="time">Time</label>
+                <input type="time" class="form-element" id="time" name="time" min="9:00:00" max="18:00:00" required>
+            </div>
+            <!-- /.form-group -->
+        
+            <div class="form-group form-column">
+                <label for="url">URL</label>
+                <input type="url" class="form-element" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
+            </div>
+            <!-- /.form-group -->
+            
+            <div class="form-group form-column">
+                <label for="week">Week</label>
+                <input type="week" class="form-element" name="week" id="week" min="2018-W18" max="2018-W26" required>
+            </div>
+            <!-- /.form-group -->
+    
+    
+        </form>
+
+    </div>
+    <!-- /.section-body -->    
+    
+</section>
+<!-- /.page-section -->
+
+<section class="page-section">
+    
+        <div class="section-body">
+    
+            @@include('../table/_table.html', {
+                "table-class": "table table-hover"
+            })
+    
+        </div>
+        <!-- /.section-body -->    
+        
+    </section>
+    <!-- /.page-section -->
+
+<div class="grid">
+
+    <div class="col-sm-4">
+        <div class="panel panel-warning accordion open">
+            <div class="panel-header">
+                <a href="#" class="panel-toggle ">
+                    <h3 class="panel-title">Filter 1</h3>
+                    <i class="icon fa fa-minus" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="form-group form-column">
+                    <label for="sample1">Label</label>
+                    <input type="text" id="sample1" class="form-element">
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group form-column">
+                    <label for="select1">Label longer name</label>
+                    <div class="form-select">
+                        <select name="select1" id="select1" class="form-element">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <!-- /.form-select -->
+                </div>
+                <!-- /.form-group -->
+        
+            </div>
+            <!-- /.panel-body -->
+        
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-sm-4 -->
+
+    <div class="col-sm-4">
+        <div class="panel panel-success accordion">
+            <div class="panel-header">
+                <a href="#" class="panel-toggle ">
+                    <h3 class="panel-title">Filter 2</h3>
+                    <i class="icon fa fa-plus" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="form-group form-column">
+                    <label for="sample2">Label</label>
+                    <input type="text" id="sample2" class="form-element">
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group form-column">
+                    <label for="select2">Label longer name</label>
+                    <div class="form-select">
+                        <select name="select2" id="select2" class="form-element">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <!-- /.form-select -->
+                </div>
+                <!-- /.form-group -->
+            </div>
+        </div>
+        <!-- /.panel -->
+        
+    </div>
+    <!-- /.col-sm-4 -->
+    <div class="col-sm-4">
+        <div class="panel panel-basic accordion">
+            <div class="panel-header">
+                <a href="#" class="panel-toggle ">
+                    <h3 class="panel-title">Filter 3</h3>
+                    <i class="icon fa fa-plus" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="form-group form-column">
+                    <label for="sample3">Label</label>
+                    <input type="text" id="sample3" class="form-element">
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group form-column">
+                    <label for="select3">Label longer name</label>
+                    <div class="form-select">
+                        <select name="select" id="select3" class="form-element">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <!-- /.form-select -->
+                </div>
+                <!-- /.form-group -->
+        
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-sm-4 -->
+</div>
+<!-- /.grid -->
+
+
+<section class="page-section">
+
+    <header class="section-header">
+        <h2 class="section-title">Components</h2>
+
+        <ul class="page-section--actions list-inline">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle btn btn-primary btn-sm">Action</a>
+                <ul class="dropdown-menu dropdown-menu--right">
+                    <li>
+                        <a href="#">Sample action</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- /.section-header -->
+
+    <div class="section-body">
+
+        <h2>Grid</h2>
+        <div class="grid example">
+
+            <div class="col-sm-12">.col-sm-12</div>
+
+            <div class="col-sm-6">.col-sm-6</div>
+            <div class="col-sm-6">.col-sm-6</div>
+
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+
+            <div class="col-sm-2">.col-sm-2</div>
+            <div class="col-sm-2">.col-sm-2</div>
+            <div class="col-sm-2">.col-sm-2</div>
+            <div class="col-sm-2">.col-sm-2</div>
+            <div class="col-sm-2">.col-sm-2</div>
+            <div class="col-sm-2">.col-sm-2</div>
+
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+            <div class="col-sm-1">.col-sm-1</div>
+
+        </div>
+        <!-- /.grid -->
+
+        <h2>Alerts</h2>
+
+        <div class="alert alert-primary">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <div class="alert alert-dark">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <div class="alert alert-success">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <div class="alert alert-danger">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <div class="alert alert-warning">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <div class="alert alert-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore accusamus in veniam? Reprehenderit unde facilis necessitatibus, voluptatibus illum cum!</p>
+            <a href="#"><i class="icon fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <!-- /.alert -->
+
+        <h2>Text colors</h2>
+
+        <p class="text-primary">Primary - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-dark">Dark - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-light">Light - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-success">Success - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-danger">Danger - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-warning">Warning - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+        <p class="text-info">Info - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae reprehenderit voluptates nihil quis nam facere ipsum possimus doloremque aliquid? Natus!</p>
+
+        <h2>Buttons</h2>
+
+        <a href="#" class="btn btn-primary">Primary</a>
+        <a href="#" class="btn btn-dark">Dark</a>
+        <a href="#" class="btn btn-light">Light</a>
+        <a href="#" class="btn btn-success">Success</a>
+        <a href="#" class="btn btn-danger">Danger</a>
+        <a href="#" class="btn btn-warning">Warning</a>
+        <a href="#" class="btn btn-info">Info</a>
+
+        <h4>Block button</h4>
+
+        <a href="#" class="btn btn-success btn-block">Block</a>
+
+        <h4>Button sizes</h4>
+
+        <a href="#" class="btn btn-danger btn-xs">Size-xs</a>
+        <a href="#" class="btn btn-info btn-sm">Size-sm</a>
+        <a href="#" class="btn btn-dark">Size default</a>
+        <a href="#" class="btn btn-success btn-lg">Size-lg</a>
+
+        <h2>Paginagtion</h2>
+
+        <nav>
+            <ul class="pagination">
+                <li class="disabled"><a href="#"></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+
+        <h2>Nav tabs</h2>
+
+        <ul class="nav-tabs" role="tablist" id="navTabs">
+            <li role="presentation" class="active">
+                <a href="#dashboard" id="tabDash">
+                    <span>Dashboard</span>
+                    <i class="icon fa fa-dashboard" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li role="presentation" class="">
+                <a href="#users" id="tabNav">
+                    <span>Users</span>
+                    <i class="icon fa fa-users" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- /.nav-tabs -->
+        
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="dashboard">
+                Dashboard
+            </div>
+            <div role="tabpanel" class="tab-pane" id="users">
+                Users
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+        <!-- /.tab-content -->
+
+        <h2>Modal window</h2>
+
+        <button class="btn btn-primary" id="filter-modal">Open modal</button>
+
+    </div>
+    <!-- /.section-body -->
+
+</section>
+<!-- /.page-section -->
+
+
+
+<div class="branding-page">
+    <small>Powered by</small>
+    <a href="https://www.neos.hr/" target="_blank">
+      <img src="assets/images/logo-neos.svg" alt="NEOS">
+    </a>
+</div>
+<!-- /.branding-page -->

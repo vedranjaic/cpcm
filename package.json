@@ -1,0 +1,14 @@
+{
+  "name": "cpcm",
+  "version": "1.0.0",
+  "description": "Albanian Central Portal for Control and Management",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NEOS d.o.o.",
+  "license": "ISC",
+  "dependencies": {
+    "initium": "^1.0.9"
+  }
+}
