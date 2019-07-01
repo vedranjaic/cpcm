@@ -9,6 +9,24 @@
   "author": "NEOS d.o.o.",
   "license": "ISC",
   "dependencies": {
-    "initium": "^1.0.9"
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-tinify": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.3.1",
+    "modernizr": "^3.7.1",
+    "natives": "^1.1.6",
+    "npm-modernizr": "^2.8.3",
+    "initium": "^2.0.2"
+  },
+  "publishConfig": {
+    "registry": "http://neocvm58.neos.hr:8081/repository/npm-neos/"
   }
 }
