@@ -4,267 +4,192 @@
 * Author: NEOS
  * URL: https://www.neos.hr
  */
- 
- @font-face {
-     font-family: "Axiforma-Regular";
-     src: url("assets/fonts/Axiforma-Regular.eot");
-     src: url("assets/fonts/Axiforma-Regular.eot?#iefix") format("embedded-opentype"),
-       url("assets/fonts/Axiforma-Regular.woff") format("woff"),
-       url("assets/fonts/Axiforma-Regular.ttf") format("truetype"),
-       url("assets/fonts/Axiforma-Regular.svg#svgFontName") format("svg");
- }
-   
- @font-face {
- font-family: "Axiforma-Bold";
- src: url("assets/fonts/Axiforma-Bold.eot");
- src: url("assets/fonts/Axiforma-Bold.eot?#iefix") format("embedded-opentype"),
-     url("assets/fonts/Axiforma-Bold.woff") format("woff"),
-     url("assets/fonts/Axiforma-Bold.ttf") format("truetype"),
-     url("assets/fonts/Axiforma-Bold.svg#svgFontName") format("svg");
- }
+
+@font-face {
+  font-family: "Axiforma-Regular";
+  src: url("assets/fonts/Axiforma-Regular.eot");
+  src: url("assets/fonts/Axiforma-Regular.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Axiforma-Regular.woff") format("woff"),
+    url("assets/fonts/Axiforma-Regular.ttf") format("truetype"),
+    url("assets/fonts/Axiforma-Regular.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "Axiforma-Bold";
+  src: url("assets/fonts/Axiforma-Bold.eot");
+  src: url("assets/fonts/Axiforma-Bold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Axiforma-Bold.woff") format("woff"),
+    url("assets/fonts/Axiforma-Bold.ttf") format("truetype"),
+    url("assets/fonts/Axiforma-Bold.svg#svgFontName") format("svg");
+}
+
 // Initium
 @import "../../../node_modules/initium/src/assets/styles/_settings.scss";
+@import "cpcm-settings.scss";
 
-$page-sidebar-width: $sidebar-width * 2;
-$page-sidebar-profile-width: $sidebar-width * 1.5;
-$font-primary:      'Axiforma-Regular';
-$font-bold:         'Axiforma-Bold';
-$font: $font-primary;
 
 @import "../../../node_modules/initium/src/assets/styles/_framework.scss";
 @import "../../../node_modules/initium/src/assets/styles/_components.scss";
-
+@import "dashboard.scss";
+@import "login.scss";
+@import "navbar-tabs.scss";
+@import "navbar.scss";
+// @import "dashboard.scss";
 
 .page-content {
-    align-items: stretch !important;
-    
-}
-.page-sidebar--profile {
-    width: $page-sidebar-profile-width !important;
-    
-    h2 {
-        font-family: $font-bold;
-    }
+  align-items: stretch !important;
 }
 
+.page-sidebar--profile {
+  width: $page-sidebar-profile-width !important;
+
+  h2 {
+    font-family: $font-bold;
+  }
+}
 
 .page-section {
-    // For toggling page sidebar
-    @include transition(width);
+  // For toggling page sidebar
+  @include transition(width);
 }
-
 
 .alert {
-    p {
-        display: flex;
-        align-items: center;
+  p {
+    display: flex;
+    align-items: center;
 
-        .icon {
-            margin-right: $size;
-        }
+    .icon {
+      margin-right: $size;
     }
+  }
 }
 
-
-
-
-
-
 .test-anim {
-    flex-direction: row-reverse;
-    padding-top: $size;
-    padding-bottom: $size;
+  flex-direction: row-reverse;
+  padding-top: $size;
+  padding-bottom: $size;
 
-    @include hover {
-        li { animation: test; }
-    }
-
+  @include hover {
     li {
-        @include transition(opacity);
-        opacity: 0;
+      animation: test;
     }
-    
-    @for $i from 1 through 2 {
-        li:nth-child(#{$i}) {
-            animation-duration: 300ms;
-            animation-fill-mode: forwards;
+  }
 
-            &:not(:first-child) {
-                animation-delay: 50ms * $i;
-            }
+  li {
+    @include transition(opacity);
+    opacity: 0;
+  }
 
-            &:first-child {
-                opacity: 1;
-            }
-        }
+  @for $i from 1 through 2 {
+    li:nth-child(#{$i}) {
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+
+      &:not(:first-child) {
+        animation-delay: 50ms * $i;
+      }
+
+      &:first-child {
+        opacity: 1;
+      }
     }
+  }
 }
 
 @keyframes test {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .logo {
-    font-size: $font-size-11;
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    min-width: 180px;
-    margin-right: 2rem;
+  font-size: $font-size-11;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  min-width: 180px;
+  margin-right: 2rem;
 
-    svg {
-        width: 30px;
-        height: 30px;
-    }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
 
-    span {
-        font-size: 1.8em;
-        font-family: $font-bold;
-        line-height: 1;
-    }
+  span {
+    font-size: 1.8em;
+    font-family: $font-bold;
+    line-height: 1;
+  }
 
-    a {
-        font-size: 12px;
-        line-height: 16px;
-        display: inline-block;
-    }
+  a {
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+  }
 }
 
-.navbar-tabs {
-    display: flex;
 
-    @include position-sticky($navbar-height);
 
-    &.nav-main {
-        padding-left: $size-30;
-        background-color: grey(400);
-    }
 
-    .nav-main--dashboard {
-        display: block;
-        margin-right: $size-10 / 2;
-        line-height: 1;
-    }
-
-    .nav-main--current-app {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-right: $size-30;
-    }
-
-    .nav-main--title {
-        padding-bottom: 4px;
-        color: grey(100);
-        font-weight: normal;
-    }
-
-    // Nav tabs override
-    .nav-tabs {
-        a {
-            background-color: grey(400);
-            color: grey(100);
-
-            @include hover-focus {
-                background-color: grey(600);
-            }
-        }
-
-        li {
-            border-right: 1px solid grey(500);
-        }
-
-        .active {
-            a {
-                background-color: grey(100);
-
-                @include hover {
-                    cursor: default;
-                }
-            }
-        }
-    }
-}
-
-.dashboard-apps {
-    margin-top: $size-30;
-    margin-bottom: $size-30;
-}
-.dashboard-app {
-    margin-bottom: $size / 3;
-}
-
-.app-card {
-    display: flex;
-    padding: $size;
-    height: 100%;
-    margin-bottom: $size-10;
-    background-color: $white;
-
-    @include transition(background-color color);
-    @include border-radius($radius);
-    @include hover-focus {
-        background-color: grey(300);
-        color: $white;
-    }
-
-    .app-card--icon {
-        margin-right: $size;
-    }
-}
 
 // Page content
 .content {
 
-    // Account for navbar height
-	@include breakpoint(sm) {
-		height: calc(100vh - #{$navbar-height} - #{$navbar-tabs-height});
-    }
+  // Account for navbar height
+  @include breakpoint(sm) {
+    height: calc(100vh - #{$navbar-height} - #{$navbar-tabs-height});
+  }
+
+  .page-sidebar {
+    margin-left: $size;
+  }
 }
 
 // Table compare
 .table-compare {
+  display: flex;
+
+  thead,
+  tbody {
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  thead {
+    position: fixed;
+    background-color: #fff;
+
+    th {
+      width: 100% !important;
+      height: 41px;
+      border-width: 1px;
+    }
+  }
+
+  tbody {
+    padding-left: 160px;
     display: flex;
 
-    thead,
-    tbody {
-        tr {
-            display: flex;
-            flex-direction: column;
-        }
+    td {
+      width: 100% !important;
     }
-
-    thead {
-        position: fixed;
-        background-color: #fff;
-
-        th {
-            width: 100% !important;
-            height: 41px;
-            border-width: 1px;
-        }
-    }
-
-    tbody {
-        padding-left: 160px;
-        display: flex;
-        td {
-            width: 100% !important;
-        }
-    }
-    
+  }
 }
 
-
-
 .page-sidebar-demo {
-    img {
-        margin-bottom: $size;
-    }
-    .panel-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: $size;
-    }
+  img {
+    margin-bottom: $size;
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $size;
+  }
 }

@@ -1,0 +1,95 @@
+.grid {
+
+    [class*="col-"] {
+        padding: $size-10 / 2;
+    }
+}
+
+.full-height-auto {
+
+    min-height: 33%;
+    display: flex;
+    flex-direction: column;
+
+    >div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.double-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: calc(50% - (#{$size-10} / 2));
+
+    &:first-child {
+        margin-bottom: $size-10;
+    }
+}
+
+.dashboard-apps {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+.dashboard-app {
+    margin-bottom: $size / 3;
+    // padding: $size-10;
+
+    .app-card {
+
+        display: flex;
+        padding: $size;
+        height: 100%;
+        margin-bottom: $size-10;
+        border: 2px solid $brand-teal;
+
+        @include transition(all color);
+        @include border-radius($radius);
+
+        @include hover-focus {
+            background-color: $brand-blue;
+            border: 2px solid $brand-blue;
+            color: $white;
+        }
+
+        &:hover {
+            .app-card--details {
+                small {
+                    // visibility: visible;
+                }
+            }
+        }
+
+        &--icon {
+            svg {
+
+                path,
+                circle,
+                rect,
+                line,
+                polyline {
+                    stroke: $brand-teal;
+                }
+            }
+
+            margin-right: $size;
+        }
+
+        &--details {
+            small {
+                @include transition(visibility);
+                // visibility: hidden;
+                // color: $white;
+            }
+        }
+    }
+
+}
+
+.panel_full {
+    padding: $size-10;
+    height: 100%;
+}
