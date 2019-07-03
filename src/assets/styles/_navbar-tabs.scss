@@ -1,0 +1,73 @@
+.navbar-tabs {
+  display: flex;
+  justify-content: space-between;
+
+  @include position-sticky($navbar-height);
+
+  &.nav-main {
+    padding-left: $size-30;
+    background-color: grey(300);
+  }
+
+  .nav-main--dashboard {
+    display: flex;
+    justify-content: center;
+    margin-right: $size-10 / 2;
+    line-height: 1;
+
+    svg {
+      height: 30px;
+      width: 30px;
+
+      path,
+      rect,
+      polyline,
+      circle,
+      line {
+        stroke: grey(600);
+      }
+    }
+  }
+
+  .nav-main--current-app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: $size-30;
+  }
+
+  .nav-main--title {
+    color: grey(600);
+    font-weight: normal;
+  }
+
+  // Nav tabs override
+  .nav-tabs {
+    a {
+      background-color: grey(200);
+      color: grey(600);
+
+
+      @include hover-focus {
+        background-color: grey(100);
+      }
+    }
+
+    li {
+      // border-right: 1px solid grey(500);
+    }
+
+    .active {
+      a {
+        // background-color: grey(100);
+        background-color: grey(100);
+
+        color: grey(600);
+
+        @include hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+}

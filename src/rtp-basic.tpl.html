@@ -16,29 +16,13 @@
     <div class="content">
       <!-- <div class="tab-content"> -->
       <!-- <div role="tabpanel" class="tab-pane active" id="RTPSearch"> -->
-      <div class="page-content page-sidebar--true">
+      <div class="page-content page-sidebar--hidden">
         <section class="panel panel-page">
           <header class="panel-header">
-            <h4 class="section-title">Search Tax Payers</h4>
-
-            <ul class="page-section--actions nav-tabs" role="tablist" id="searchTabs">
-              <li role="presentation" class="active">
-                <a href="#dashboard" id="tabSearchSimple">
-                  <span>Simple search</span>
-                </a>
-              </li>
-              <li role="presentation" class="">
-                <a href="#users" id="tabSearchAdvanced">
-                  <span>Advanced search</span>
-                </a>
-              </li>
-            </ul>
-            <!-- /.nav-tabs -->
+            <h4 class="section-title">Status: Active</h4>
           </header>
 
-          <div class="panel-body">
-            @@include('assets/components/_pages/rtp/_search.html')
-          </div>
+          <div class="panel-body"></div>
           <!-- /.section-body -->
         </section>
         <!-- /.panel -->
@@ -77,14 +61,11 @@
           <!-- /.section-body -->
         </section>
         <!-- /.panel -->
-        @@include('assets/components/page/_page-sidebar-profile.html', {
-        "page-sidebar--heading-hidden": "hidden" })
       </div>
       <!-- /.page-content -->
       <!-- </div> -->
       <div role="tabpanel" class="tab-pane" id="RTPBasic">
-        <div class="page-content" id="-page-basic">
-        </div>
+        <div class="page-content" id="-page-basic"></div>
       </div>
       <div role="tabpanel" class="tab-pane" id="RTPCatalog">
         Catalog
