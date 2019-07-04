@@ -10,10 +10,12 @@
 
 <div class="container">
   @@include('assets/components/_navbar.html')
-  @@include('assets/components/_navbar-tabs.html')
+  @@include('assets/components/_navbar-tabs.html', {
+  "classActiveTax": "active"
+  })
 
   <div class="content-container">
-    @@include('assets/components/page/_sidebar-menu.html')
+    <!-- @@include('assets/components/page/_sidebar-menu.html') -->
     <div class="content">
       <!-- <div class="tab-content"> -->
       <!-- <div role="tabpanel" class="tab-pane active" id="RTPSearch"> -->
@@ -83,13 +85,6 @@
       </div>
       <!-- /.page-content -->
       <!-- </div> -->
-      <div role="tabpanel" class="tab-pane" id="RTPBasic">
-        <div class="page-content" id="-page-basic">
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="RTPCatalog">
-        Catalog
-      </div>
       <!-- /.tab-pane -->
       <!-- </div> -->
       <!-- /.tab-content -->
