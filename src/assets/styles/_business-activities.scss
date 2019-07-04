@@ -18,11 +18,10 @@
 
         &.primary {
             .tag {
-                // background-color: ;
                 color: $white;
 
                 &::before {
-                    // background-color: darken(, 20%);
+                    background-color: darken($brand-teal, 20%);
                 }
             }
         }
@@ -30,26 +29,24 @@
 
     .tag {
         background: $brand-blue;
-        color: darken($brand-blue, 20%);
+        color: lighten($brand-blue, 60%);
         display: inline-block;
         height: $size-30;
         line-height: $size-30;
         position: relative;
         text-decoration: none;
         padding: 0 $size-20;
-        -webkit-transition: color 0.2s;
-        border-radius: 100px;
+        // border-radius: 100px;
         font-size: $font-size-12;
 
         &::before {
-            background-color: darken($brand-blue, 20%);
+            background-color: lighten($brand-blue, 60%);
             content: "";
             border-radius: 100px;
             width: 5px;
             height: 5px;
             position: absolute;
             top: 50%;
-            -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
             left: $size / 2;
         }

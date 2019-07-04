@@ -225,12 +225,12 @@
         </ul>
 
         <ul class="nav-tabs">
-            <li class="@@classActiveTax">
+            <li class="@@classActiveSearch">
                 <a href="rtp.html">
                     Search
                 </a>
             </li>
-            <li class="@@classActiveSearch">
+            <li class="active">
                 <a href="profile.html">
                     Tax payer
                 </a>
@@ -291,7 +291,7 @@
         								<span class="menu-item--title ">Tax payer profile</span>
         							</a>
         						</li>
-        						<li class="menu-item ">
+        						<li class="menu-item @@classActiveIncome">
         							<a href="rtp-income.html" title="Components">
         								<span class="menu-item--title ">Source of income/Business units</span>
         							</a>
@@ -311,8 +311,8 @@
         								<span class="menu-item--title ">Business units</span>
         							</a>
         						</li>
-        						<li class="menu-item ">
-        							<a href="#" title="Components">
+        						<li class="menu-item active">
+        							<a href="business-activities.html" title="Components">
         								<span class="menu-item--title ">Business activities</span>
         							</a>
         						</li>
@@ -367,12 +367,32 @@
                         <ul class="page-section--actions nav-tabs" role="tablist" id="searchTabs">
                             <li role="presentation" class="active">
                                 <a href="#dashboard" id="tabSearchSimple">
-                                    <span>Simple search</span>
+                                    <span>All activities</span>
                                 </a>
                             </li>
                             <li role="presentation" class="">
                                 <a href="#users" id="tabSearchAdvanced">
-                                    <span>Advanced search</span>
+                                    <span>New activities</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#users" id="tabSearchAdvanced">
+                                    <span>Past activities</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#users" id="tabSearchAdvanced">
+                                    <span>Alphabetic</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#users" id="tabSearchAdvanced">
+                                    <span>Date from</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#users" id="tabSearchAdvanced">
+                                    <span>Date to</span>
                                 </a>
                             </li>
                         </ul>
@@ -427,7 +447,537 @@
 
             </div>
             <!-- /.page-content -->
+            <div class="page-content page-sidebar--true">
 
+                <section class="panel panel-page">
+
+                    <header class="panel-header panel-header--sticky">
+                        <h4 class="section-title">Other business activities</h4>
+
+                        <ul class="panel-header--actions list-inline">
+                            <li>
+                                <a href="#" class="btn btn-dark"><i class="icon fa fa-download"></i> Export to
+                                    .xls</a>
+                            </li>
+                        </ul>
+                    </header>
+                    <!-- /.panel-header -->
+
+                    <div class="panel-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="select-all">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" name="selectalltr" id="selectalltr">
+                                                <label for="selectalltr" title=" Select all"></label>
+                                            </div>
+                                        </th>
+
+                                        <th class="column-highlight">
+                                            <div class="thead-th">
+                                                <span>Naziv</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>Adresa</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>OIB</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>Tip</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>Podtip</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>Porezni broj</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th><th class="">
+                                            <div class="thead-th">
+                                                <span>Status</span>
+                                                <ul class="table-sort-filter list-inline">
+                                                    <li class="table-sort">
+                                                        <a href="#" title="Sort Ascending"><svg class="sortAsc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" y="19" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" width="12" height="5"/></svg></a>
+                                                        <a href="#" title="Sort Descending"><svg class="sortDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="cls-1" width="24" height="5"/><rect class="cls-1" y="9.42" width="18" height="5"/><rect class="cls-1" y="19" width="12" height="5"/></svg></a>
+                                                    </li>
+                                                    <li class="table-filter dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-type="table-filter">
+                                                            <i class="icon fa fa-angle-down" aria-hidden="true"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
+                                                            <li>
+                                                                <div class="form-checkbox">
+                                                                    <input type="checkbox" id="id1">
+                                                                    <label for="id1">NEOS d.o.o.</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dropdown-actions">
+                                                                <ul class="dropdown-actions-list list-inline">
+                                                                    <li><a href="#">Select all</a></li>
+                                                                    <li><a href="#">Clear all</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </th>
+                
+                                        <th class="column-actions">
+                                            <span>Profile</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="select">
+                                            <div class="form-checkbox">
+                                                <input type="checkbox" id="tablecheckbox1">
+                                                <label for="tablecheckbox1"></label>
+                                            </div>
+                                        </td>
+
+                                        <td class="column-highlight">NEOS d.o.o.</td>
+                                        <td class="">Ulica kneza Ljudevita Posavskog 31</td>
+                                        <td class="">13456890238975</td>
+                                        <td class="">Pravna osoba</td>
+                                        <td class="">d.o.o.</td>
+                                        <td class="">097-2-1</td>
+                                        <td class=""><i class='icon fa fa-circle text-success' aria-hidden='true'></i></td>
+
+                                        <td class="row-actions text-center">
+                                            <a href="profile.html" class="btn btn-xs btn-light">View profile</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                        </div>
+                        <!-- /.table-responsive -->
+
+                        <footer class="table-footer">
+                            <p class="help-text ">Showing <strong>1 to 10</strong> of <strong>1567</strong> entries</p>
+
+                            <nav class="">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#"></a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </nav>
+                        </footer>
+                        <!-- /.table-footer -->
+
+                    </div>
+                    <!-- /.panel-body -->
+
+                </section>
+                <!-- /.panel -->
+
+
+                <aside class="page-sidebar">
+
+                    <div class="page-sidebar--heading hidden">
+                        <h3 class="page-sidebar--title">Stats</h3>
+                        <a href="#" class="page-sidebar--clearall">Hide all</a>
+                    </div>
+   
+                    <div class="panel panel-basic">
+                        <div class="panel-body">
+                            <img src="assets/images/albania.png" alt="" class="img-responsive">
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel panel-basic -->
+
+                </aside>
+                <!-- /.page-sidebar -->
+
+            </div>
+            <!-- /.page-content -->
         </div>
         <!-- /.content -->
     </div>

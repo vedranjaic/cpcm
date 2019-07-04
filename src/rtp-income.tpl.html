@@ -9,11 +9,15 @@
 
     @@include('assets/components/_navbar.html')
 
-    @@include('assets/components/_navbar-tabs.html')
+    @@include('assets/components/_navbar-tabs.html', {
+    "classActiveTax": "active"
+    })
 
 
     <div class="content-container">
-        @@include('assets/components/page/_sidebar-menu.html')
+        @@include('assets/components/page/_sidebar-menu.html', {
+        "classActiveIncome": "active"
+        })
 
         <div class="content">
 

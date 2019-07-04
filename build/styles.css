@@ -3192,21 +3192,22 @@ select {
 .tags li.primary .tag {
   color: #ffffff;
 }
+.tags li.primary .tag::before {
+  background-color: #1e6e77;
+}
 .tags .tag {
   background: #242e45;
-  color: #010102;
+  color: #bec7dd;
   display: inline-block;
   height: 1.875rem;
   line-height: 1.875rem;
   position: relative;
   text-decoration: none;
   padding: 0 1.25rem;
-  -webkit-transition: color 0.2s;
-  border-radius: 100px;
   font-size: 0.75rem;
 }
 .tags .tag::before {
-  background-color: #010102;
+  background-color: #bec7dd;
   content: "";
   border-radius: 100px;
   width: 5px;
