@@ -1,0 +1,118 @@
+@@include('assets/components/_head.html')
+
+<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+<div class="container">
+
+    @@include('assets/components/_navbar.html')
+
+    @@include('assets/components/_navbar-tabs.html')
+
+    <div class="content-container">
+        @@include('assets/components/page/_page-sidebar-menu.html')
+
+        <div class="content">
+
+
+            <div class="page-content">
+
+                <section class="panel panel-page">
+
+                    <header class="panel-header panel-header--sticky">
+                        <h4 class="section-title">NEOS d.o.o.</h4>
+                        <span>Tax number</span>
+                        <span>Address</span>
+
+                        <ul class="panel-header--actions list-inline">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle btn btn-primary btn-sm">Action</a>
+                                <ul class="dropdown-menu dropdown-menu--right">
+                                    <li>
+                                        <a href="#">Edit profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Add to Special Catalog</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </header>
+
+                    <div class="panel-body">
+                        <ul class="page-section--actions nav-tabs" role="tablist" id="searchTabs">
+                            <li role="presentation" class="active">
+                                <a href="#dashboard" id="tabSearchSimple">
+                                    <span>Simple search</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#users" id="tabSearchAdvanced">
+                                    <span>Advanced search</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="RTPSearch">
+
+                                <h5 class="section-title">Business activities</h5>
+                                <div>
+                                    <ul class="tags">
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="tag">Business activitie</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.panel-body -->
+                </section>
+                <!-- /.panel -->
+
+            </div>
+            <!-- /.page-content -->
+
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-container -->
+
+</div>
+<!-- /.container -->
+
+
+@@include('assets/components/_footer.html')

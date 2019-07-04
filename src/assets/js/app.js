@@ -26,7 +26,7 @@ $(".menu-toggle").click(function () {
 
 // Toggle menu
 $(".menu-item > a, .submenu-item > a").click(function (e) {
-    e.preventDefault()
+    // e.preventDefault()
     // $(this).parent().siblings().removeClass("open");
     $(this).parent().siblings().removeClass("active");
     $(this).parent().addClass("active");

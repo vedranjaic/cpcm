@@ -1,0 +1,26 @@
+.sidebar {
+    @include transition(height);
+    background-color: $white;
+    border-right: 1px solid grey(100);
+    overflow: hidden;
+    height: auto;
+    padding-top: $size;
+    // display: none;
+
+    @include breakpoint(sm) {
+        @include transition(width);
+        display: block;
+        height: calc(100vh - (#{$navbar-height} + #{$nav-main-height}));
+        width: $sidebar-width;
+    }
+
+    // Sidebar closed
+    .sidebar-closed & {
+        height: 0;
+
+        @include breakpoint(sm) {
+            width: $sidebar-closed-width;
+            height: auto;
+        }
+    }
+}
