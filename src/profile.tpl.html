@@ -9,10 +9,12 @@
 
 	@@include('assets/components/_navbar.html')
 
-	@@include('assets/components/_navbar-tabs.html')
+	@@include('assets/components/_navbar-tabs.html', {
+	"classActiveSearch": "active"
+	})
 
 	<div class="content-container">
-		@@include('assets/components/page/_page-sidebar-menu.html')
+		@@include('assets/components/page/_sidebar-menu.html')
 
 		<div class="content">
 
