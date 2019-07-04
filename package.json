@@ -20,11 +20,11 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-tinify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
+    "initium": "^2.0.3",
     "jquery": "^3.3.1",
     "modernizr": "^3.7.1",
     "natives": "^1.1.6",
-    "npm-modernizr": "^2.8.3",
-    "initium": "^2.0.2"
+    "npm-modernizr": "^2.8.3"
   },
   "publishConfig": {
     "registry": "http://neocvm58.neos.hr:8081/repository/npm-neos/"
