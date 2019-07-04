@@ -34,7 +34,12 @@
 @import "login.scss";
 @import "navbar-tabs.scss";
 @import "navbar.scss";
+@import "sidebar.scss";
 // @import "dashboard.scss";
+
+.content {
+  padding: $size / 2;
+}
 
 .page-content {
   align-items: stretch !important;

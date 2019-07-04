@@ -1,13 +1,26 @@
 .navbar-tabs {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   @include position-sticky($navbar-height);
 
   &.nav-main {
-    padding-left: $size-30;
+    // padding-left: $size-30;
     background-color: grey(300);
+    // height: 2 * $size-20;
+    height: 2 * $size-20;
+
+    .nav-main--current-app {
+      display: flex;
+      justify-content: center;
+      width: $sidebar-width;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
+
+
 
   .nav-main--dashboard {
     display: flex;
@@ -29,13 +42,6 @@
     }
   }
 
-  .nav-main--current-app {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: $size-30;
-  }
-
   .nav-main--title {
     color: grey(600);
     font-weight: normal;
@@ -43,9 +49,12 @@
 
   // Nav tabs override
   .nav-tabs {
+
+
     a {
       background-color: grey(200);
       color: grey(600);
+      padding: 0 $size;
 
 
       @include hover-focus {
@@ -54,7 +63,7 @@
     }
 
     li {
-      // border-right: 1px solid grey(500);
+      line-height: 2 * $size-20;
     }
 
     .active {
