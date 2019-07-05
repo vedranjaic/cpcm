@@ -1,0 +1,34 @@
+<div class="table-responsive">
+
+    <table class="table @@table-class">
+        <thead>
+            <tr>
+                <th class="select-all">
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="selectalltr" id="selectalltr">
+                        <label for="selectalltr" title=" Select all"></label>
+                    </div>
+                </th>
+
+                @@loop('_table-thead.html', [
+                { "th-class": "column-highlight", "th-heading": "Naziv"},
+                { "th-class": "", "th-heading": "Adresa"},
+                { "th-class": "", "th-heading": "City"},
+                { "th-class": "", "th-heading": "Zip-code"},
+                { "th-class": "", "th-heading": "Country"},
+                { "th-class": "", "th-heading": "Valid date"},
+                { "th-class": "", "th-heading": "Last changed"}
+                ])
+
+                <th class="column-actions">
+                    <span>Profile</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @@include('_table-row.html')
+
+        </tbody>
+    </table>
+
+</div>

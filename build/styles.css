@@ -3509,6 +3509,10 @@ select {
   margin-left: 1rem;
 }
 
+.tab-content {
+  margin-top: 1rem;
+}
+
 .table-compare {
   display: -ms-flexbox;
   display: flex;

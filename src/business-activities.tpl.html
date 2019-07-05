@@ -25,7 +25,9 @@
 
                 <section class="panel panel-page">
 
-                    <header class="panel-header panel-header--sticky">
+                    @@include('assets/components/page/_panel-header-info.html')
+
+                    <!-- <header class="panel-header panel-header--sticky">
                         <h4 class="section-title">NEOS d.o.o.</h4>
                         <span>Tax number</span>
                         <span>Address</span>
@@ -43,9 +45,11 @@
                                 </ul>
                             </li>
                         </ul>
-                    </header>
+                    </header> -->
 
                     <div class="panel-body">
+                        <h5 class="section-title">Business activities</h5>
+
                         <ul class="page-section--actions nav-tabs" role="tablist" id="searchTabs">
                             <li role="presentation" class="active">
                                 <a href="#dashboard" id="tabSearchSimple">
@@ -80,8 +84,6 @@
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="RTPSearch">
-
-                                <h5 class="section-title">Business activities</h5>
                                 <div>
                                     <ul class="tags">
                                         <li>
