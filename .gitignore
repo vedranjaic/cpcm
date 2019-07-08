@@ -6,6 +6,9 @@ _materijali/
 _radno/
 _assets/
 
+# BUILD
+build/
+
 # PROJECT & WORKSPACE FILES
 *.sublime-project
 *.sublime-workspace

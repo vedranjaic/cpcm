@@ -3242,6 +3242,13 @@ select {
   justify-content: center;
 }
 
+.double-panels {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .double-panel {
   display: -ms-flexbox;
   display: flex;
@@ -3508,7 +3515,7 @@ select {
 }
 
 @media (min-width: 768px) {
-  .content {
+  .content:not(.page-dashboard) {
     height: calc(100vh - 3.75rem - 2.5rem);
   }
 }

@@ -155,7 +155,7 @@
 
 
 // Page content
-.content {
+.content:not(.page-dashboard) {
 
   // Account for navbar height
   @include breakpoint(sm) {

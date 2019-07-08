@@ -24,6 +24,11 @@
     }
 }
 
+.double-panels {
+    display: flex;
+    flex-direction: column;
+}
+
 .double-panel {
     display: flex;
     flex-direction: column;
