@@ -8,6 +8,7 @@ _assets/
 
 # BUILD
 build/
+build/**/*.*
 
 # PROJECT & WORKSPACE FILES
 *.sublime-project
