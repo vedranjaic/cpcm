@@ -51,11 +51,12 @@
 .page-sidebar--toggle {
   flex-direction: row;
 }
+
 .page-sidebar--profile {
   overflow: hidden;
   white-space: nowrap;
   margin-left: 0;
-  
+
   .page-sidebar--true & {
     width: $page-sidebar-profile-width !important;
     margin-left: $size;
@@ -214,5 +215,24 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: $size;
+    background-color: #FFF;
+
   }
+}
+
+// Panel header
+.panel-header {
+  &.panel-header--sticky {
+    background-color: $white;
+  }
+}
+
+.sort-row {
+  display: flex;
+  margin-bottom: $size-10;
+
+  div:not(:first-child) {
+    margin-left: $size-10;
+  }
+
 }
