@@ -12,188 +12,172 @@
         </div>
 
         <div class="help-text text-center">
-                <p>
-                    Search parametars:
-                </p>
+            <p>
+                Search parametars:
+            </p>
 
-                <ul class="list-unstyled">
-                    <li>Tax number</li>
-                    <li>Tax payer Name</li>
-                    <li>Tax payer Middle Name</li>
-                    <li>Tax payer Middle Name</li>
-                    <li>Name</li>
-                    <li>Short name</li>
-                </ul>
-                <br>
-                <small>Enter a single value. </small>
-                <small>Multiple values, separate each with commas.</small>
+            <ul class="list-unstyled">
+                <li>Tax number</li>
+                <li>Tax payer Name</li>
+                <li>Tax payer Middle Name</li>
+                <li>Tax payer Middle Name</li>
+                <li>Name</li>
+                <li>Short name</li>
+            </ul>
+            <br>
+            <small>Enter a single value. </small>
+            <small>Multiple values, separate each with commas.</small>
         </div>
 
     </div>
     <div role="tabpanel" class="tab-pane" id="searchAdvanced">
-                          <div class="grid">
-                              <div class="radio--form">
-                                  <input type="radio" id="select-type-1" name="radio-example" value="select-type-1" />
-                                  <label for="select-type-1">
-                                      <span></span>
-                                      <!-- This span is needed to create the "checkbox" element -->
-                                      Physical Entity
-                                  </label>
-                              </div>
-                              <!-- <div class="form-radio">
+        <div class="grid">
+            <div class="col-md-12 sort-row">
+                <div class="radio--form">
+                    <input type="radio" id="select-type-1" name="radio-example" value="select-type-1" />
+                    <label for="select-type-1">
+                        <span></span>
+                        <!-- This span is needed to create the "checkbox" element -->
+                        Physical Entity
+                    </label>
+                </div>
+                <!-- <div class="form-radio">
                       <input id="select-type-1" type="radio" name="radio-example" value="select-type-1" />
                       <label for="select-type-1">Pravna osoba</label>
                     </div> -->
-                              <div class="radio--form">
-                                  <input type="radio" id="select-type-2" name="radio-example" value="select-type-2" />
-                                  <label for="select-type-2">
-                                      <span></span>
-                                      <!-- This span is needed to create the "checkbox" element -->
-                                      Legal Entity
-                                  </label>
-                              </div>
-                              <!-- /.form-check -->
-                              <!-- <div class="form-radio">
+                <div class="radio--form">
+                    <input type="radio" id="select-type-2" name="radio-example" value="select-type-2" />
+                    <label for="select-type-2">
+                        <span></span>
+                        <!-- This span is needed to create the "checkbox" element -->
+                        Legal Entity
+                    </label>
+                </div>
+                <!-- /.form-check -->
+                <!-- <div class="form-radio">
                       <input id="select-type-2" type="radio" name="radio-example" value="select-type-2" />
                       <label for="select-type-2">Fizička osoba</label>
                     </div> -->
-                          </div>
-                          <!-- /.gird -->
-                          <div class="grid">
-                              <div class="col-md-3 form-group form-column">
-                                  <div class="floating-label">
-                                      <input placeholder="Tip" autocomplete="off" type="text"
-                                          class="ff-item-type-1 form-element" name="tip" size="10" />
-                                      <label class="ff-item-type-1" for="tip">Tip</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Podtip" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="podtip" size="10" />
-                                      <label class="ff-item-type-1" for="podtip">Podtip</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Porezni broj" autocomplete="off" type="number"
-                                          class="form-element" name="porezni_broj" size="10" />
-                                      <label for="porezni_broj">Porezni broj</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Ime" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-2" name="name" size="10" />
-                                      <label class="ff-item-type-2" for="name">Ime</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Prezime" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-2" name="prezime" size="10" />
-                                      <label class="ff-item-type-2" for="prezime">Prezime</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Srednje ime" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-2" name="srednje_ime" size="10" />
-                                      <label class="ff-item-type-2" for="srednje_ime">Srednje ime</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                              </div>
-                              <!-- form-group end -->
-                              <div class="col-md-3 form-group form-column">
-                                  <div class="floating-label">
-                                      <input placeholder="Tip" autocomplete="off" type="text"
-                                          class="ff-item-type-1 form-element" name="tip" size="10" />
-                                      <label class="ff-item-type-1" for="tip">Naziv</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Podtip" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="podtip" size="10" />
-                                      <label class="ff-item-type-1" for="podtip">Kratki naziv</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Kratki naziv" autocomplete="off" type="date"
-                                          class="form-element ff-item-type-2" name="kratki_broj" size="10" />
-                                      <label class="ff-item-type-2" for="kratki_broj">Datum rođenja</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input autocomplete="off" type="date" class="form-element ff-item-type-1"
-                                          name="datum_osnutka" size="10" />
-                                      <label class="ff-item-type-1" for="name">Datum osnutka</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Registriran u katalogu" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="regu_kat" size="10" />
-                                      <label class="ff-item-type-1" for="regu_kat">Registriran u katalogu</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Identifikacijski broj" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="ID_num" size="10" />
-                                      <label class="ff-item-type-1" for="ID_num">Identifikacijski broj</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                              </div>
-                              <!-- form-group end -->
-                              <div class="col-md-3 form-group form-column">
-                                  <div class="floating-label">
-                                      <input placeholder="Grad" autocomplete="off" type="text"
-                                          class="ff-item-type-1 form-element" name="grad" size="10" />
-                                      <label class="ff-item-type-1" for="grad">Grad</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Ulica" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="ulica" size="10" />
-                                      <label class="ff-item-type-1" for="ulica">Ulica</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Porezni broj" autocomplete="off" type="number"
-                                          class="form-element" name="porezni_broj" size="10" />
-                                      <label for="porezni_broj">Kućni broj</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Država" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-2" name="drzava" size="10" />
-                                      <label class="ff-item-type-2" for="drzava">Država</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                              </div>
-                              <!-- form-group end -->
-                              <div class="col-md-3 form-group form-column">
-                                  <div class="floating-label">
-                                      <input placeholder="Status" autocomplete="off" type="text"
-                                          class="ff-item-type-1 form-element" name="status" size="10" />
-                                      <label class="ff-item-type-1" for="status">Status</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input placeholder="Djelatnost" autocomplete="off" type="text"
-                                          class="form-element ff-item-type-1" name="djelatnost" size="10" />
-                                      <label class="ff-item-type-1" for="djelatnost">Djelatnost</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                                  <div class="floating-label">
-                                      <input autocomplete="off" type="date" class="form-element" name="date"
-                                          size="10" />
-                                      <label for="date">Datum</label>
-                                      <span class="border-anim"></span>
-                                  </div>
-                              </div>
-                              <!-- form-group end -->
-                              <div class="col-md-12">
-                                  <button class="btn btn-dark">Search</button>
-                              </div>
-                          </div>
-                          <!-- /.grid -->
+            </div>
+        </div>
+        <!-- /.gird -->
+        <div class="grid">
+            <div class="col-md-3 form-group form-column">
+
+                <input placeholder="Tip" autocomplete="off" type="text" class="ff-item-type-1 form-element" name="tip"
+                    size="10" />
+                <label class="ff-item-type-1" for="tip">Tip</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Podtip" autocomplete="off" type="text" class="form-element ff-item-type-1"
+                    name="podtip" size="10" />
+                <label class="ff-item-type-1" for="podtip">Podtip</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Porezni broj" autocomplete="off" type="number" class="form-element"
+                    name="porezni_broj" size="10" />
+                <label for="porezni_broj">Porezni broj</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Ime" autocomplete="off" type="text" class="form-element ff-item-type-2" name="name"
+                    size="10" />
+                <label class="ff-item-type-2" for="name">Ime</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Prezime" autocomplete="off" type="text" class="form-element ff-item-type-2"
+                    name="prezime" size="10" />
+                <label class="ff-item-type-2" for="prezime">Prezime</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Srednje ime" autocomplete="off" type="text" class="form-element ff-item-type-2"
+                    name="srednje_ime" size="10" />
+                <label class="ff-item-type-2" for="srednje_ime">Srednje ime</label>
+                <span class="border-anim"></span>
+
+            </div>
+            <!-- form-group end -->
+            <div class="col-md-3 form-group form-column">
+
+                <input placeholder="Tip" autocomplete="off" type="text" class="ff-item-type-1 form-element" name="tip"
+                    size="10" />
+                <label class="ff-item-type-1" for="tip">Naziv</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Podtip" autocomplete="off" type="text" class="form-element ff-item-type-1"
+                    name="podtip" size="10" />
+                <label class="ff-item-type-1" for="podtip">Kratki naziv</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Kratki naziv" autocomplete="off" type="date" class="form-element ff-item-type-2"
+                    name="kratki_broj" size="10" />
+                <label class="ff-item-type-2" for="kratki_broj">Datum rođenja</label>
+                <span class="border-anim"></span>
+
+                <input autocomplete="off" type="date" class="form-element ff-item-type-1" name="datum_osnutka"
+                    size="10" />
+                <label class="ff-item-type-1" for="name">Datum osnutka</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Registriran u katalogu" autocomplete="off" type="text"
+                    class="form-element ff-item-type-1" name="regu_kat" size="10" />
+                <label class="ff-item-type-1" for="regu_kat">Registriran u katalogu</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Identifikacijski broj" autocomplete="off" type="text"
+                    class="form-element ff-item-type-1" name="ID_num" size="10" />
+                <label class="ff-item-type-1" for="ID_num">Identifikacijski broj</label>
+                <span class="border-anim"></span>
+
+            </div>
+            <!-- form-group end -->
+            <div class="col-md-3 form-group form-column">
+
+                <input placeholder="Grad" autocomplete="off" type="text" class="ff-item-type-1 form-element" name="grad"
+                    size="10" />
+                <label class="ff-item-type-1" for="grad">Grad</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Ulica" autocomplete="off" type="text" class="form-element ff-item-type-1"
+                    name="ulica" size="10" />
+                <label class="ff-item-type-1" for="ulica">Ulica</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Porezni broj" autocomplete="off" type="number" class="form-element"
+                    name="porezni_broj" size="10" />
+                <label for="porezni_broj">Kućni broj</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Država" autocomplete="off" type="text" class="form-element ff-item-type-2"
+                    name="drzava" size="10" />
+                <label class="ff-item-type-2" for="drzava">Država</label>
+                <span class="border-anim"></span>
+
+            </div>
+            <!-- form-group end -->
+            <div class="col-md-3 form-group form-column">
+
+                <input placeholder="Status" autocomplete="off" type="text" class="ff-item-type-1 form-element"
+                    name="status" size="10" />
+                <label class="ff-item-type-1" for="status">Status</label>
+                <span class="border-anim"></span>
+
+                <input placeholder="Djelatnost" autocomplete="off" type="text" class="form-element ff-item-type-1"
+                    name="djelatnost" size="10" />
+                <label class="ff-item-type-1" for="djelatnost">Djelatnost</label>
+                <span class="border-anim"></span>
+
+                <input autocomplete="off" type="date" class="form-element" name="date" size="10" />
+                <label for="date">Datum</label>
+                <span class="border-anim"></span>
+
+            </div>
+            <!-- form-group end -->
+            <div class="col-md-12">
+                <button class="btn btn-dark">Search</button>
+            </div>
+        </div>
+        <!-- /.grid -->
     </div>
     <!-- /.tab-pane -->
 </div>
 <!-- /.tab-content -->
-
-

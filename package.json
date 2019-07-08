@@ -20,7 +20,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-tinify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
-    "initium": "^2.0.3",
+    "initium": "^2.0.4",
     "jquery": "^3.3.1",
     "modernizr": "^3.7.1",
     "natives": "^1.1.6",
