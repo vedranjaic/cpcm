@@ -25,11 +25,13 @@
 
 // Initium
 @import "../../../node_modules/initium/src/assets/styles/_settings.scss";
+
 @import "cpcm-settings.scss";
 
 
 @import "../../../node_modules/initium/src/assets/styles/_framework.scss";
 @import "../../../node_modules/initium/src/assets/styles/_components.scss";
+
 @import "business-activities.scss";
 @import "dashboard.scss";
 // @import "login.scss";
@@ -39,15 +41,25 @@
 // @import "dashboard.scss";
 
 .content {
-  padding: $size / 2;
+  // padding: $size / 2;
 }
 
 .page-content {
   align-items: stretch !important;
 }
 
+.page-sidebar--toggle {
+  flex-direction: row;
+}
 .page-sidebar--profile {
-  width: $page-sidebar-profile-width !important;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 0;
+  
+  .page-sidebar--true & {
+    width: $page-sidebar-profile-width !important;
+    margin-left: $size;
+  }
 
   h2 {
     font-family: $font-bold;
@@ -148,10 +160,11 @@
   // Account for navbar height
   @include breakpoint(sm) {
     height: calc(100vh - #{$navbar-height} - #{$navbar-tabs-height});
+    // height: calc(100vh - #{$navbar-height} - #{$navbar-tabs-height});
   }
 
   .page-sidebar {
-    margin-left: $size;
+    // margin-left: $size;
   }
 }
 

@@ -1,15 +1,21 @@
-.grid {
-
-    [class*="col-"] {
-        padding: $size-10 / 2;
-    }
-}
 
 .full-height-auto {
+    .grid {
+    
+        [class*="col-"] {
+            &:first-child {
+                padding-right: $size-10 / 2;
+            }
+            &:last-child {
+                padding-left: $size-10 / 2;
+            }
+        }
+    }
 
     min-height: 33%;
     display: flex;
     flex-direction: column;
+    margin-bottom: $size-10;
 
     >div {
         flex: 1;
@@ -22,7 +28,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    height: calc(50% - (#{$size-10} / 2));
+    // height: calc(50% - (#{$size-10} / 2));
 
     &:first-child {
         margin-bottom: $size-10;
@@ -43,7 +49,7 @@
         display: flex;
         padding: $size;
         height: 100%;
-        margin-bottom: $size-10;
+        // margin-bottom: $size-10;
         border: 2px solid $brand-teal;
 
         @include transition(all color);
@@ -90,6 +96,6 @@
 }
 
 .panel_full {
-    padding: $size-10;
+    // padding: $size-10;
     height: 100%;
 }

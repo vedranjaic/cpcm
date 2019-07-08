@@ -107,7 +107,7 @@ $('.panel-header a').click(function () {
 // Page sidebar toggle
 $('#demo-page-search-results tr td:not(:last-child)').click(function () {
     $('#demo-page-search-results').toggleClass('page-sidebar--true');
-    $('.page-sidebar--profile').toggleClass('hidden');
+    // $('.page-sidebar--profile').toggleClass('hidden');
 })
 
 // Login floating label

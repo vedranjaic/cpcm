@@ -51,7 +51,7 @@
       </div>
       <!-- /.page-content -->
 
-      <div class="page-content" id="demo-page-search-results">
+      <div class="page-content page-sidebar--toggle" id="demo-page-search-results">
         <section class="panel panel-page">
           <header class="panel-header panel-header--sticky">
             <h4 class="section-title">Search Results</h4>
@@ -72,10 +72,13 @@
           <!-- /.panel-header -->
 
           <div class="panel-body">
-            @@include('assets/components/table/_table.html', { "table-class":
-            "table table-hover" })
+            @@include('assets/components/table/_table.html', { 
+              "table-class": "table table-hover"
+            })
             @@include('assets/components/table/_table-footer.html', {
-            "help-text--hidden": "", "pagination--hidden": "" })
+              "help-text--hidden": "", 
+              "pagination--hidden": "" 
+            })
           </div>
           <!-- /.section-body -->
         </section>
