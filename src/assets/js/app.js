@@ -1,11 +1,11 @@
 // Toggle menu
-$.fn.toggleAttrVal = function (attr, val1, val2) {
+$.fn.toggleAttrVal = function(attr, val1, val2) {
     var test = $(this).attr(attr);
-    if (test === val1) {
+    if ( test === val1) {
         $(this).attr(attr, val2);
         return this;
     }
-    if (test === val2) {
+    if ( test === val2) {
         $(this).attr(attr, val1);
         return this;
     }
@@ -14,11 +14,11 @@ $.fn.toggleAttrVal = function (attr, val1, val2) {
     return this;
 };
 
-$('a[href="#"').click(function (e) {
+$('a[href="#"]').click(function (e) {
     e.preventDefault()
 });
 
-$(".menu-toggle").click(function () {
+$(".menu-toggle").click(function() {
     $("body").toggleClass("sidebar-closed");
     $('#menuOpen').toggleClass('hidden');
     $('#menuClose').toggleClass('hidden')
@@ -48,57 +48,44 @@ $('#navTabs a').click(function () {
     $('#navTabs li').removeClass('active');
     $(this).parent().addClass('active');
 })
-$('#tabRTPSearch').click(function () {
-    $('#RTPSearch').toggleClass('active');
-    $('#RTPBasic').toggleClass('active');
+$('#tabDash').click(function() {
+    $('#users').toggleClass('active');
+    $('#dashboard').toggleClass('active');
 })
-$('#tabRTPBasic').click(function () {
-    $('#RTPBasic').toggleClass('active');
-    $('#RTPSearch').toggleClass('active');
-})
-// Search tabs
-$('#searchTabs a').click(function () {
-    $('#searchTabs li').removeClass('active');
-    $(this).parent().addClass('active');
-})
-$('#tabSearchSimple').click(function () {
-    $('#searchSimple').toggleClass('active');
-    $('#searchAdvanced').toggleClass('active');
-})
-$('#tabSearchAdvanced').click(function () {
-    $('#searchAdvanced').toggleClass('active');
-    $('#searchSimple').toggleClass('active');
+$('#tabNav').click(function() {
+    $('#dashboard').toggleClass('active');
+    $('#users').toggleClass('active');
 })
 
 // Toggle filter label
-$('#filter-label-toggle').click(function () {
+$('#filter-label-toggle').click(function() {
     $('.table-filters').toggleClass('hidden');
 })
 
 // Table
-$('tr').click(function () {
+$('tr').click(function() {
     $(this).toggleClass('active');
     $(this).find('.checkbox').toggleClass('fa-square fa-check-square')
 })
 
 // Dropdown
-$('.dropdown-toggle').click(function (e) {
+$('.dropdown-toggle').click(function(e){
     e.preventDefault()
     $(this).parent('.dropdown').toggleClass('open');
 });
 
 // Modal
-$('#filter-modal').click(function () {
+$('#filter-modal').click(function() {
     $('body').toggleClass('modal-open');
     $('#modal').toggleClass('open');
 })
-$('.modal-close').click(function () {
+$('.modal-close').click(function() {
     $('body').toggleClass('modal-open');
     $('#modal').toggleClass('open');
 });
 
 // Panel toggle
-$('.panel-header a').click(function () {
+$('.panel-header a').click(function() {
     $(this).parent().parent().toggleClass('open');
     $(this).children('.icon').toggleClass('fa-plus fa-minus')
 })

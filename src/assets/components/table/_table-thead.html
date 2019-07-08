@@ -1,7 +1,8 @@
 <th class="@@th-class">
+    <!-- <span>@@th-heading</span> -->
     <div class="thead-th">
         <span>@@th-heading</span>
-        <ul class="table-sort-filter">
+        <ul class="table-sort-filter @@table-sort-filter--hidden">
             <li class="table-sort">
                 <a href="#" title="Sort Ascending">@@include('../../images/table-icons/sortAsc.svg')</a>
                 <a href="#" title="Sort Descending">@@include('../../images/table-icons/sortDesc.svg')</a>
@@ -13,8 +14,26 @@
                 <ul class="dropdown-menu dropdown-menu--right dropdown-menu--checkbox">
                     <li>
                         <div class="form-checkbox">
-                            <input type="checkbox" id="id1">
-                            <label for="id1">NEOS d.o.o.</label>
+                            <input type="checkbox" id="filtercheck@@croid">
+                            <label for="filtercheck@@croid">Croatia Osiguranje</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="filtercheck@@dsjuid">
+                            <label for="filtercheck@@dsjuid">DŠJU - Državna škola za javnu upravu</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="filtercheck@@finaid">
+                            <label for="filtercheck@@finaid">Fina - Financijska Agencija</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="filtercheck@@htid">
+                            <label for="filtercheck@@htid">Hrvatski Telekom</label>
                         </div>
                     </li>
                     <li class="dropdown-actions">
