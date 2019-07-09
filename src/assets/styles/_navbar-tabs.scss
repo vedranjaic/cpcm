@@ -1,36 +1,65 @@
 .navbar-tabs {
   display: flex;
+  z-index: 1000;
   // justify-content: space-between;
 
   @include position-sticky($navbar-height);
 
   &.nav-main {
-    // padding-left: $size-30;
+    padding-left: $size-30 / 2;
     background-color: grey(200);
-    // height: 2 * $size-20;
     height: 2 * $size-20;
+
+    @include breakpoint(sm) {
+      padding-left: $size-30;
+    }
 
     .nav-main--current-app {
       display: flex;
-      justify-content: center;
-      width: $sidebar-width;
-      display: flex;
       flex-direction: row;
       align-items: center;
+      white-space: nowrap;
+
+      .dropdown {
+        display: flex;
+        align-items: center;
+      }
+
+      .dropdown-tabs {
+        position: absolute;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(sm) {
+          opacity: 1;
+          flex-direction: row;
+          position: static;
+          min-width: auto;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
     }
   }
 
-
-
   .nav-main--dashboard {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-right: $size-10 / 2;
+    margin-right: $size-10;
     line-height: 1;
+
+    &::after {
+      content: '\f105';
+      font-family: $font-fa;
+      line-height: 1;
+    }
 
     svg {
       height: 30px;
       width: 30px;
+      margin-right: $size-10;
 
       path,
       rect,
@@ -45,17 +74,24 @@
   .nav-main--title {
     color: grey(600);
     font-weight: normal;
+    white-space: nowrap;
+    padding-right: $size-30;
+
+    &::after {
+      @include breakpoint(sm) {
+        content: '' !important;
+      }
+    }
   }
 
   // Nav tabs override
   .nav-tabs {
-
+    opacity: 0;
 
     a {
       background-color: grey(200);
       color: grey(600);
       padding: 0 $size;
-
 
       @include hover-focus {
         background-color: grey(100);
@@ -70,13 +106,19 @@
       a {
         // background-color: grey(100);
         background-color: grey(100);
-
         color: grey(600);
 
         @include hover {
           cursor: default;
         }
       }
+    }
+  }
+
+
+  .open {
+    .nav-tabs {
+      opacity: 1;
     }
   }
 }

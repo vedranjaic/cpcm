@@ -216,7 +216,6 @@
     justify-content: space-between;
     margin-bottom: $size;
     background-color: #FFF;
-
   }
 }
 
@@ -224,6 +223,21 @@
 .panel-header {
   &.panel-header--sticky {
     background-color: $white;
+  }
+
+  span {
+    display: none;
+    padding-left: $size;
+    padding-right: $size;
+
+    @include breakpoint(md) {
+      display: inline;
+    }
+  }
+
+  .panel-header--actions {
+    flex: 1;
+    justify-content: flex-end;
   }
 }
 
