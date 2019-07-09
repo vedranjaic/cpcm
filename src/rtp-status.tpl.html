@@ -16,14 +16,13 @@
 
     <div class="content-container">
         @@include('assets/components/page/_sidebar-menu.html', {
-        "classActiveIncome": "active"
+        "classActiveStatus": "active"
         })
 
         <div class="content">
 
             <div class="page-content">
                 <section class="panel panel-page">
-
                     @@include('assets/components/page/_panel-header-info.html',{
                     "panel-info" : "hidden"
                     })
@@ -38,11 +37,11 @@
                 <section class="panel panel-page">
 
                     <header class="panel-header panel-header--sticky">
-                        <h4 class="section-title">Business units</h4>
+                        <h4 class="section-title">Tax payer status</h4>
 
                         <ul class="panel-header--actions list-inline">
                             <li>
-                                <a href="#" id="filter-modal" class="btn btn-primary"><i class="icon fa fa-plus"></i>
+                                <a href="#" class="btn btn-primary"><i class="icon fa fa-plus"></i>
                                     Add new</a>
                             </li>
                             <li>
@@ -55,7 +54,7 @@
 
                     <div class="panel-body">
 
-                        @@include('assets/components/table/_table.html', {
+                        @@include('assets/components/table/_table-id.html', {
                         "table-class": "table table-hover",
                         "table-sort-filter--hidden": "",
                         "table-footer--hidden": ""
@@ -78,5 +77,5 @@
 </div>
 <!-- /.container -->
 
-@@include('assets/components/modal/_modal-add-new.html')
+@@include('assets/components/modal/_modal.html')
 @@include('assets/components/_footer.html')
