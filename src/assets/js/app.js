@@ -85,7 +85,7 @@ $('.modal-close').click(function () {
 });
 
 // Panel toggle
-$('.panel-header a').click(function () {
+$('.accordion .panel-toggle').click(function () {
     $(this).parent().parent().toggleClass('open');
     $(this).children('.icon').toggleClass('fa-plus fa-minus')
 })
