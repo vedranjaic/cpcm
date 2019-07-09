@@ -1,26 +1,24 @@
-
 .full-height-auto {
-    .grid {
-    
-        [class*="col-"] {
-            &:first-child {
-                padding-right: $size-10 / 2;
-            }
-            &:last-child {
-                padding-left: $size-10 / 2;
-            }
-        }
-    }
-
-    min-height: 33%;
+    min-height: 25vh;
     display: flex;
     flex-direction: column;
     margin-bottom: $size-10;
 
-    >div {
+    > div {
         flex: 1;
-        display: flex;
-        justify-content: center;
+    }
+    
+    .grid {
+        @include breakpoint(sm) {
+            [class*="col-"] {
+                &:first-child {
+                    padding-right: $size-10 / 2;
+                }
+                &:last-child {
+                    padding-left: $size-10 / 2;
+                }
+            }
+        }
     }
 }
 
@@ -33,7 +31,6 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // height: calc(50% - (#{$size-10} / 2));
 
     &:first-child {
         margin-bottom: $size-10;
@@ -47,14 +44,11 @@
 
 .dashboard-app {
     margin-bottom: $size / 3;
-    // padding: $size-10;
 
     .app-card {
-
         display: flex;
         padding: $size;
         height: 100%;
-        // margin-bottom: $size-10;
         border: 2px solid $brand-teal;
 
         @include transition(all color);
@@ -66,17 +60,10 @@
             color: $white;
         }
 
-        &:hover {
-            .app-card--details {
-                small {
-                    // visibility: visible;
-                }
-            }
-        }
+        .app-card--icon {
+            margin-right: $size;
 
-        &--icon {
             svg {
-
                 path,
                 circle,
                 rect,
@@ -85,15 +72,11 @@
                     stroke: $brand-teal;
                 }
             }
-
-            margin-right: $size;
         }
 
-        &--details {
+        .app-card--details {
             small {
                 @include transition(visibility);
-                // visibility: hidden;
-                // color: $white;
             }
         }
     }
