@@ -49,12 +49,13 @@
 
   // Nav tabs override
   .nav-tabs {
-
+    width: calc(100vw - #{$sidebar-width});
 
     a {
       background-color: grey(200);
       color: grey(600);
       padding: 0 $size;
+      line-height: 2 * $size-20;
 
 
       @include hover-focus {
@@ -63,7 +64,16 @@
     }
 
     li {
-      line-height: 2 * $size-20;
+      display: flex;
+
+      &:last-child {
+        margin-left: auto;
+
+        a {
+
+          background: rgba($grey-600, 0.4);
+        }
+      }
     }
 
     .active {
