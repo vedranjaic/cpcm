@@ -44,7 +44,8 @@ $(document).ready(function () {
 
 
 // Tabs
-$('#navTabs a').click(function () {
+$('#navTabs a').click(function (e) {
+    e.preventDefault();
     $('#navTabs li').removeClass('active');
     $(this).parent().addClass('active');
 })

@@ -29,7 +29,9 @@
         position: absolute;
         top: 100%;
         display: flex;
+        width: 100%;
         flex-direction: column;
+        box-shadow: 0 5px 10px darken(grey(100), 10%);
 
         @include breakpoint(sm) {
           opacity: 1;
@@ -38,6 +40,7 @@
           min-width: auto;
           padding-top: 0;
           padding-bottom: 0;
+          box-shadow: none;
         }
       }
     }
@@ -89,10 +92,11 @@
     opacity: 0;
 
     a {
-      background-color: grey(200);
-      color: grey(600);
+      flex: 1;
       padding: 0 $size;
       line-height: 2 * $size-20;
+      background-color: grey(200);
+      color: grey(600);
 
       @include hover-focus {
         background-color: grey(100);
@@ -101,15 +105,6 @@
 
     li {
       display: flex;
-
-      &:last-child {
-        margin-left: auto;
-
-        a {
-
-          background: rgba($grey-600, 0.4);
-        }
-      }
     }
 
     .active {
