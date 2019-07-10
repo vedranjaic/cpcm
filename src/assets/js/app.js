@@ -111,3 +111,14 @@ $(".input-form").each(function () {
         }
     });
 });
+
+$(function () { //run when the DOM is ready
+    $(".signup").click(function () { //use a class, since your ID gets mangled
+        $(".panel-login").toggleClass("panel-header--full"); //add the class to the clicked element
+    });
+});
+$(function () { //run when the DOM is ready
+    $(".forgot-password").click(function () { //use a class, since your ID gets mangled
+        $(".panel-login").toggleClass("panel-header--forgot"); //add the class to the clicked element
+    });
+});

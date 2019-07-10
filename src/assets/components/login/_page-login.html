@@ -1,17 +1,20 @@
 <div class="panel panel-login">
-
     <header class="panel-header">
-        <img src="assets/images/logo-neos.svg" class="login-logo" alt="NEOS" width="120">
+        <img src="assets/images/neos-new-logo_primary-light.svg" class="login-logo" alt="NEOS" width="120">
 
         <div class="login-welcome-back">
-            <h5>Welcome back!</h5>
-            <small>Login with credentials you have <br>received in your email.</small>
+            <h5>Welcome!</h5>
+            <small><br>Login with credentials</small>
+        </div>
+        <div class="signin-create-account">
+            <h5>Create account!</h5>
+            <small><br>Fill up the form.</small>
         </div>
     </header>
     <!-- /.panel-header -->
 
-    <div class="panel-body">
 
+    <div class="panel-body panel-body--signin">
         <h3 class="login-title">Login</h3>
 
         <form action="index.html">
@@ -21,15 +24,54 @@
                 <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
             </div>
             <div class="form-group form-column">
-                <label for="loginpassword">Password:</label>
+                <label for="loginpassword">Password:
+                    <small class="forgot-password"><a id="filter-modal" href="#">Forgot password?</a></small>
+                </label>
                 <input type="password" id="loginpassword" class="form-element">
                 <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
             </div>
             <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
+            <span class="acconut">Don't have an account? <a href="#" class="signup">Sign up now</a></span>
+        </form>
+
+    </div>
+    <!-- /.panel-body -->
+    <div class="panel-body panel-body--signup">
+        <h3 class="login-title">Sign up</h3>
+
+        <form action="index.html">
+            <div class="name-first-last">
+                <div class="form-group form-column form-column--padding">
+                    <label for="loginusername">First Name:</label>
+                    <input type="text" id="loginusername" class="form-element">
+                    <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+                </div>
+                <div class="form-group form-column">
+                    <label for="loginusername">Last Name:</label>
+                    <input type="text" id="loginusername" class="form-element">
+                    <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+                </div>
+            </div>
+            <div class="name-first-last">
+                <div class="form-group form-column form-column--padding">
+                    <label for="loginusername">Username:</label>
+                    <input type="text" id="loginusername" class="form-element">
+                    <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+                </div>
+                <div class="form-group form-column">
+                    <label for="loginpassword">Password:</label>
+                    <input type="password" id="loginpassword" class="form-element">
+                    <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+
+                </div>
+            </div>
+            <button class="btn btn-lg btn-success btn-block" type="submit">Sign up</button>
+            <span class="acconut">Already have an account? <a href="#" class="signup">Login</a></span>
         </form>
 
     </div>
     <!-- /.panel-body -->
 
 </div>
-<!-- /.panel -->
+<!-- /.panel-login -->
+@@include('../modal/_modal-reset.html')
