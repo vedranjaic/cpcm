@@ -67,10 +67,23 @@
     font-family: $font-bold;
   }
 }
+.page-sidebar--inverse {
+  flex-direction: column-reverse;
+
+  @include breakpoint(sm) {
+
+  }
+}
 
 .page-section {
   // For toggling page sidebar
   @include transition(width);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 0.8rem;
+  color: grey(400);
 }
 
 .alert {
@@ -207,33 +220,62 @@
   }
 }
 
-.page-sidebar-demo {
-  img {
-    margin-bottom: $size;
-  }
-
+.page-sidebar-contact {
   .panel-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: $size;
     background-color: #FFF;
+    align-items: center;
+
+    .btn-text-toggle {
+      span {
+        @include breakpoint(md) {
+          display: none;
+        }
+        @include breakpoint(lg) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .panel-body {
+    @include breakpoint(xs) {
+      display: flex;
+    }
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+
+    .profile-contact-map {
+      margin-bottom: $size;
+
+      @include breakpoint(xs) {
+        width: 50%;
+        margin-right: $size;
+        margin-bottom: 0;
+      }
+      @include breakpoint(md) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: $size;
+      }
+    }
   }
 }
 
 // Panel header
 .panel-header {
-  &.panel-header--sticky {
-    background-color: $white;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  @include breakpoint(xs) {
+    flex-direction: row;
   }
 
-  span {
-    display: none;
-    padding-left: $size;
-    padding-right: $size;
-
-    @include breakpoint(md) {
-      display: inline;
-    }
+  &.panel-header--sticky {
+    background-color: $white;
   }
 
   .panel-header--actions {
