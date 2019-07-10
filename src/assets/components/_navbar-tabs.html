@@ -1,36 +1,51 @@
 <nav class="navbar-tabs nav-main">
-    <ul class="list-unstyled nav-main--current-app">
-        <li>
-            <a href="/" title="Dashboard" class="nav-main--dashboard">
-                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
-                    aria-labelledby="dashboardIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square"
-                    stroke-linejoin="miter" fill="none" color="#2329D6">
-                    <title id="dashboardIconTitle">Dashboard</title>
-                    <rect width="20" height="20" x="2" y="2" />
-                    <path d="M11 7L17 7M11 12L17 12M11 17L17 17" />
-                    <line x1="7" y1="7" x2="7" y2="7" />
-                    <line x1="7" y1="12" x2="7" y2="12" />
-                    <line x1="7" y1="17" x2="7" y2="17" />
-                </svg>
-
-            </a>
+  <ul class="list-unstyled nav-main--current-app">
+    <li>
+      <a href="/" title="Dashboard" class="nav-main--dashboard">
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="appsIconTitle"
+          stroke="#2329D6"
+          stroke-width="1"
+          stroke-linecap="square"
+          stroke-linejoin="miter"
+          fill="none"
+          color="#2329D6"
+        >
+          <title id="appsIconTitle">Apps drawer</title>
+          <circle cx="6" cy="6" r="1" />
+          <circle cx="12" cy="6" r="1" />
+          <circle cx="18" cy="6" r="1" />
+          <circle cx="6" cy="12" r="1" />
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="18" cy="12" r="1" />
+          <circle cx="6" cy="18" r="1" />
+          <circle cx="12" cy="18" r="1" />
+          <circle cx="18" cy="18" r="1" />
+        </svg>
+      </a>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-main--title dropdown-toggle"
+        >Registered Tax Payer</a
+      >
+      <ul class="dropdown-tabs nav-tabs">
+        <li class="@@classActiveSearch">
+          <a href="rtp.html">
+            Search
+          </a>
         </li>
-        <li class="dropdown">
-            <a href="#" class="nav-main--title dropdown-toggle">Registered Tax Payer</a>
-            <ul class="dropdown-tabs nav-tabs">
-                <li class="@@classActiveSearch">
-                    <a href="rtp.html">
-                        Search
-                    </a>
-                </li>
-                <li class="@@classActiveTax">
-                    <a href="profile.html">
-                        Tax payer
-                    </a>
-                </li>
-            </ul>
-            <!-- /.nav-tabs -->
+        <li class="@@classActiveTax">
+          <a href="profile.html">
+            Tax payer
+          </a>
         </li>
-    </ul>
+      </ul>
+      <!-- /.nav-tabs -->
+    </li>
+  </ul>
 </nav>
 <!-- /.navbar-tabs -->
