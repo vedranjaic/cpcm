@@ -46,6 +46,15 @@
     }
   }
 
+  .dropdown {
+    position: static;
+
+    .dropdown-tabs {
+      left: 0;
+      pointer-events: none;
+    }
+  }
+
   .nav-main--dashboard {
     display: flex;
     align-items: center;
@@ -124,6 +133,9 @@
   .open {
     .nav-tabs {
       opacity: 1;
+    }
+    .dropdown-tabs {
+      pointer-events: all;
     }
   }
 }
