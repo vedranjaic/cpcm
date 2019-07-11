@@ -1,0 +1,123 @@
+.page-login {
+    .panel-login {
+        position: relative;
+
+        .login-welcome-back {
+            visibility: visible;
+            position: absolute;
+            top: 30%;
+            left: $size-10;
+        }
+
+        .signin-create-account {
+            visibility: hidden;
+            position: absolute;
+            top: 30%;
+            left: $size-10;
+        }
+
+        .panel-body--signup {
+            // display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+            position: absolute;
+            right: 0;
+        }
+
+
+        .panel-body--signin {
+            // display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: visibility 0s, opacity 0.5s linear;
+
+
+        }
+
+        &.panel-header--full {
+            .login-welcome-back {
+                visibility: hidden;
+                position: absolute;
+                top: 30%;
+                left: $size-10;
+            }
+
+            .signin-create-account {
+                visibility: visible;
+                position: absolute;
+                top: 30%;
+                left: $size-10;
+            }
+
+            .panel-body--signup {
+                // display: block;
+                opacity: 1;
+                visibility: visible;
+                position: absolute;
+                right: 0;
+                bottom: 0
+            }
+
+            .panel-body--signin {
+                // display: none;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+        }
+
+        .acconut {
+            font-size: $font-size-12;
+            text-align: center;
+            display: block;
+            margin-top: 7px;
+
+            a {
+                color: $brand-teal;
+            }
+        }
+
+        .forgot-password {
+            text-transform: lowercase;
+        }
+
+        .form-group {
+            label {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                width: 100%;
+
+                a {
+                    color: $brand-teal;
+                }
+            }
+        }
+
+        .login-welcome-back {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            position: relative;
+        }
+
+        .panel-body {
+            width: 370px;
+            min-width: unset;
+        }
+
+        .name-first-last {
+            display: flex;
+        }
+
+        .form-column--padding {
+            &:not(:last-child) {
+                padding-right: $size;
+            }
+        }
+
+    }
+}
