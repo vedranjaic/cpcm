@@ -3,6 +3,7 @@
 
     @include breakpoint(sm) {
         height: calc(100vh - (#{$navbar-height} + #{$nav-main-height}));
+        border-right: 1px solid grey(200);
     }
 
     .menu-items {
