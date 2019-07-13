@@ -9,8 +9,7 @@ var gulp = require('gulp'),
 	svgmin = require('gulp-svgmin'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-	fileinclude = require("gulp-file-include");
-
+	fileinclude = require("gulp-file-include");«
 // Sources
 var src = {
 	components: 'src/assets/components/**/*.html',
@@ -51,7 +50,7 @@ var dist = {
 
 // --- [ TASKS ]
 // Static server & watcher
-gulp.task('server', ['styles'], function() {
+gulp.task('server', ['styles'], function () {
 
 	browserSync.init({
 		server: build.dest,
@@ -95,7 +94,9 @@ gulp.task('styles', function () {
 			sourceRoot: '/'
 		}))
 		.pipe(gulp.dest(build.css))
-		.pipe(browserSync.stream({match: '**/*.css'}));
+		.pipe(browserSync.stream({
+			match: '**/*.css'
+		}));
 });
 
 // Scss min, Error handling, Autoprefixer
@@ -114,16 +115,18 @@ gulp.task('styles-min', function () {
 			suffix: ".min"
 		}))
 		.pipe(gulp.dest(build.css))
-		.pipe(browserSync.stream({match: '**/*.css'}));
+		.pipe(browserSync.stream({
+			match: '**/*.css'
+		}));
 });
 
 // STYLES to dist/
 gulp.task('styles-dist', function () {
 
 	return sass(src.scss, {
-		style: 'expanded',
-		sourcemap: true
-	})
+			style: 'expanded',
+			sourcemap: true
+		})
 		.on('error', function (err) {
 			console.error('Error!', err.message);
 		})
@@ -141,8 +144,8 @@ gulp.task('styles-dist', function () {
 // STYLES-MIN to dist/
 gulp.task('styles-min-dist', function () {
 	return sass(src.scss, {
-		style: 'compressed'
-	})
+			style: 'compressed'
+		})
 		.on('error', function (err) {
 			console.error('Error!', err.message);
 		})
@@ -161,8 +164,8 @@ gulp.task('styles-min-dist', function () {
 
 // --- [ FILEINCLUDE ]
 // Fileinclude and rename files
-gulp.task('fileinclude', function() {
-	
+gulp.task('fileinclude', function () {
+
 	return gulp.src([src.html])
 		.pipe(fileinclude({
 			indent: true
@@ -181,21 +184,21 @@ gulp.task('fileinclude', function() {
 
 // --- [ IMAGES & SVG ]
 // Copy images
-gulp.task('images', function() {
+gulp.task('images', function () {
 	// Copy images and svgs
 	return gulp.src([src.images, src.svg])
 		.pipe(gulp.dest(build.images));
 });
 
 // Copy favicon
-gulp.task('favicon', function() {
+gulp.task('favicon', function () {
 	// Copy favicon.ico to build/ folder
 	return gulp.src(src.favicon)
 		.pipe(gulp.dest(build.favicon));
 });
 
 // Optimize images
-gulp.task('image-min', function() {
+gulp.task('image-min', function () {
 	gulp.src(src.images)
 		.pipe(tinify('hcYKDxhpqdqHfZKwnZ9lzM85RvyOzIee'))
 		.pipe(gulp.dest(build.images));
@@ -204,7 +207,8 @@ gulp.task('image-min', function() {
 // SVGO
 gulp.task('svg-min', function () {
 	return gulp.src(src.svg)
-		.pipe(svgmin({plugins: [{
+		.pipe(svgmin({
+			plugins: [{
 				removeViewBox: false,
 				cleanupIDs: false,
 				cleanupAttrs: false
@@ -224,7 +228,7 @@ gulp.task('fonts', function () {
 
 // --- [ SCRIPTS FOR PRODUCTION ]
 // Main app.js file
-gulp.task('app-js', function() {
+gulp.task('app-js', function () {
 
 	// Copy main app.js
 	return gulp.src([src.js])
@@ -232,13 +236,13 @@ gulp.task('app-js', function() {
 
 });
 // Concat all .js files into new _app.js
-gulp.task('js-concat', function() {
-  return gulp.src(build.scripts)
-    .pipe(concat('_app.js'))
-    .pipe(gulp.dest(build.js));
+gulp.task('js-concat', function () {
+	return gulp.src(build.scripts)
+		.pipe(concat('_app.js'))
+		.pipe(gulp.dest(build.js));
 });
 // Minify .js
-gulp.task('js-min', function() {
+gulp.task('js-min', function () {
 	return gulp.src('build/assets/js/_app.js')
 		.pipe(uglify())
 		.pipe(rename({
@@ -250,7 +254,7 @@ gulp.task('js-min', function() {
 
 // --- [ COPY FRAMEWORKS & SCRIPTS ]
 // Javascript vendors
-gulp.task('js-vendors', function() {
+gulp.task('js-vendors', function () {
 	// Copy all vendors
 	return gulp.src([
 			src.modernizr,
@@ -280,5 +284,3 @@ gulp.task('dist', ['styles-dist', 'styles-min-dist'])
 // --- [ DEFAULT TASK ]
 // gulp
 gulp.task('default', ['styles', 'server', 'app-js']);
-
-
