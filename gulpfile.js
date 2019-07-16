@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 	svgmin = require('gulp-svgmin'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-	fileinclude = require("gulp-file-include");«
+	fileinclude = require("gulp-file-include");
 // Sources
 var src = {
 	components: 'src/assets/components/**/*.html',
