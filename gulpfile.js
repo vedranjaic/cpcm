@@ -1,14 +1,14 @@
 // Gulp & plugins
-var gulp = require("gulp"),
-  rename = require("gulp-rename"),
-  browserSync = require("browser-sync").create(),
-  sass = require("gulp-ruby-sass"),
-  sourcemaps = require("gulp-sourcemaps"),
-  autoprefixer = require("gulp-autoprefixer"),
-  tinify = require("gulp-tinify"),
-  svgmin = require("gulp-svgmin"),
-  concat = require("gulp-concat"),
-  uglify = require("gulp-uglify"),
+var gulp = require('gulp'),
+  rename = require('gulp-rename'),
+  browserSync = require('browser-sync').create(),
+  sass = require('gulp-ruby-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  autoprefixer = require('gulp-autoprefixer'),
+  tinify = require('gulp-tinify'),
+  svgmin = require('gulp-svgmin'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
   fileinclude = require("gulp-file-include");
 // Sources
 var src = {
@@ -48,7 +48,7 @@ var dist = {
 
 // --- [ TASKS ]
 // Static server & watcher
-gulp.task("server", ["styles"], function() {
+gulp.task("server", ["styles"], function () {
   browserSync.init({
     server: build.dest,
     open: false
@@ -69,12 +69,12 @@ gulp.task("server", ["styles"], function() {
 
 // --- [ STYLES ]
 // Scss, Error handling, Autoprefixer and sourcemaps
-gulp.task("styles", function() {
+gulp.task("styles", function () {
   return sass(src.scss, {
-    style: "expanded",
-    sourcemap: true
-  })
-    .on("error", function(err) {
+      style: "expanded",
+      sourcemap: true
+    })
+    .on("error", function (err) {
       console.error("Error!", err.message);
     })
     .pipe(
@@ -98,11 +98,11 @@ gulp.task("styles", function() {
 });
 
 // Scss min, Error handling, Autoprefixer
-gulp.task("styles-min", function() {
+gulp.task("styles-min", function () {
   return sass(src.scss, {
-    style: "compressed"
-  })
-    .on("error", function(err) {
+      style: "compressed"
+    })
+    .on("error", function (err) {
       console.error("Error!", err.message);
     })
     .pipe(
@@ -125,12 +125,12 @@ gulp.task("styles-min", function() {
 });
 
 // STYLES to dist/
-gulp.task("styles-dist", function() {
+gulp.task("styles-dist", function () {
   return sass(src.scss, {
-    style: "expanded",
-    sourcemap: true
-  })
-    .on("error", function(err) {
+      style: "expanded",
+      sourcemap: true
+    })
+    .on("error", function (err) {
       console.error("Error!", err.message);
     })
     .pipe(
@@ -149,11 +149,11 @@ gulp.task("styles-dist", function() {
 });
 
 // STYLES-MIN to dist/
-gulp.task("styles-min-dist", function() {
+gulp.task("styles-min-dist", function () {
   return sass(src.scss, {
-    style: "compressed"
-  })
-    .on("error", function(err) {
+      style: "compressed"
+    })
+    .on("error", function (err) {
       console.error("Error!", err.message);
     })
     .pipe(
@@ -172,7 +172,7 @@ gulp.task("styles-min-dist", function() {
 
 // --- [ FILEINCLUDE ]
 // Fileinclude and rename files
-gulp.task("fileinclude", function() {
+gulp.task("fileinclude", function () {
   return gulp
     .src([src.html])
     .pipe(
@@ -195,19 +195,19 @@ gulp.task("fileinclude", function() {
 
 // --- [ IMAGES & SVG ]
 // Copy images
-gulp.task("images", function() {
+gulp.task("images", function () {
   // Copy images and svgs
   return gulp.src([src.images, src.svg]).pipe(gulp.dest(build.images));
 });
 
 // Copy favicon
-gulp.task("favicon", function() {
+gulp.task("favicon", function () {
   // Copy favicon.ico to build/ folder
   return gulp.src(src.favicon).pipe(gulp.dest(build.favicon));
 });
 
 // Optimize images
-gulp.task("image-min", function() {
+gulp.task("image-min", function () {
   gulp
     .src(src.images)
     .pipe(tinify("hcYKDxhpqdqHfZKwnZ9lzM85RvyOzIee"))
@@ -215,44 +215,42 @@ gulp.task("image-min", function() {
 });
 
 // SVGO
-gulp.task("svg-min", function() {
+gulp.task("svg-min", function () {
   return gulp
     .src(src.svg)
     .pipe(
       svgmin({
-        plugins: [
-          {
-            removeViewBox: false,
-            cleanupIDs: false,
-            cleanupAttrs: false
-          }
-        ]
+        plugins: [{
+          removeViewBox: false,
+          cleanupIDs: false,
+          cleanupAttrs: false
+        }]
       })
     )
     .pipe(gulp.dest(build.images));
 });
 
 // Copy fonts
-gulp.task("fonts", function() {
+gulp.task("fonts", function () {
   // Copy fonts
   return gulp.src(src.fonts).pipe(gulp.dest(build.fonts));
 });
 
 // --- [ SCRIPTS FOR PRODUCTION ]
 // Main app.js file
-gulp.task("app-js", function() {
+gulp.task("app-js", function () {
   // Copy main app.js
   return gulp.src([src.js]).pipe(gulp.dest(build.js));
 });
 // Concat all .js files into new _app.js
-gulp.task("js-concat", function() {
+gulp.task("js-concat", function () {
   return gulp
     .src(build.scripts)
     .pipe(concat("_app.js"))
     .pipe(gulp.dest(build.js));
 });
 // Minify .js
-gulp.task("js-min", function() {
+gulp.task("js-min", function () {
   return gulp
     .src("build/assets/js/_app.js")
     .pipe(uglify())
@@ -266,7 +264,7 @@ gulp.task("js-min", function() {
 
 // --- [ COPY FRAMEWORKS & SCRIPTS ]
 // Javascript vendors
-gulp.task("js-vendors", function() {
+gulp.task("js-vendors", function () {
   // Copy all vendors
   return gulp.src([src.modernizr, src.jquery]).pipe(gulp.dest(build.vendors));
 });
