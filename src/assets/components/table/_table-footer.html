@@ -1,6 +1,17 @@
 <footer class="table-footer @@table-footer--hidden">
-    <p class="help-text">Showing <strong>1 to 10</strong> of <strong>1567</strong> entries</p>
+    <p class="help-text">
+        <span>Showing 1 to</span>
+        <select class="form-element">
+            <option value="">10</option>
+            <option value="">25</option>
+            <option value="">50</option>
+            <option value="">100</option>
+        </select>
+        <span>of 1567 entries</span>
+    </p>
 
     @@include('../pagination/_pagination.html')
+    <button class="btn btn-dark"><i class="fa fa-fw fa-download" aria-hidden="true"></i> Export to excel</button>
+
 </footer>
 <!-- /.table-footer -->

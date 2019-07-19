@@ -1,0 +1,120 @@
+@@include('assets/components/_head.html')
+
+<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+<div class="container">
+
+	@@include('assets/components/_navbar.html')
+
+	<!-- @@include('assets/components/_navbar-tabs.html', {
+	"classActiveTax": "active"
+	}) -->
+
+	<div class="content-container">
+		@@include('assets/components/page/_sidebar-menu.html',{
+		"classActiveUnits": "active"
+		})
+
+		<div class="content">
+			@@include('assets/components/page/_page-header--info-bu.html')
+			<!-- @@include('assets/components/page/_panel-header-info.html',{
+					"panel-header-info-all" : "hidden"
+					}) -->
+			@@include('assets/components/_navbar-tabs-bu.html', {
+			"classActiveCR" : "active"
+			})
+
+			<div class="page-content page-sidebar--toggle" id="demo-page-cr-operaters">
+
+
+				<section class="panel panel-page">
+					<header class="panel-header panel-header--sticky panel-header--sticky-bu">
+
+						<h4 class="section-title">Cash register</h4>
+
+						<ul class="panel-header--actions panel-header--actions-height list-inline">
+							<li>
+								<a href="#" class="btn btn-primary"><i class="icon fa fa-fw fa-plus"></i> Add
+									new</a>
+							</li>
+
+						</ul>
+					</header>
+					<!-- /.panel-header -->
+
+					<div class="panel-body">
+
+						@@include('assets/components/table/_table-cr.html', {
+						"table-class": "table table-hover",
+						"table-sort-filter--hidden": "hidden"
+						})
+
+					</div>
+					<!-- /.panel-body -->
+				</section>
+
+				<aside class="page-sidebar page-sidebar--profile">
+
+					<div class="panel panel-basic">
+
+						<header class="panel-header panel-header--sticky panel-header--sticky-cr">
+							<h4 class="section-title">Neos d.o.o.</h4>
+							<span class="status-active">
+								<!-- <i class="fa fa-fw fa-check-circle-o" aria-hidden="true"></i> -->
+								Active
+							</span>
+						</header>
+						<!-- /.panel-header -->
+
+						<div class="panel-body">
+							<ul class="list-unstyled profile-info--sidebar">
+								<li>Ulica kneza Ljudevita Posavskog 31</li>
+								<li><span>10 000</span>,<span>Zagreb</span>, <span>Hrvatska</span></li>
+								<!-- <li>Zagreb</li> -->
+							</ul>
+							<div class="form-group form-column">
+								<label for="">OIB:</label>
+								<p>12345678901234</p>
+							</div>
+							<!-- /.form-group -->
+							<div class="form-group form-column">
+								<label for="">Tip:</label>
+								<p>Pravna osoba</p>
+							</div>
+							<!-- /.form-group -->
+							<div class="form-group form-column">
+								<label for="">Porezni broj:</label>
+								<p>123-456-789-01234</p>
+							</div>
+							<!-- /.form-group -->
+							<div class="form-group form-column">
+								<label for="">Prihodi 2019:</label>
+								<img src="assets/images/prihodi.png" alt="" class="img-responsive">
+							</div>
+							<!-- /.form-group -->
+						</div>
+						<!-- /.panel-body -->
+
+						<div class="panel-footer">
+							<a href="profile.html" class="btn btn-primary btn-lg btn-block">View full profile</a>
+						</div>
+						<!-- /.panel-footer -->
+					</div>
+					<!-- /.panel panel-basic -->
+
+				</aside>
+
+			</div>
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-container -->
+
+</div>
+<!-- /.container -->
+
+
+@@include('assets/components/_footer.html')

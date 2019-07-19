@@ -1,7 +1,33 @@
-$page-sidebar-width: 30%;
+$page-sidebar-width: $sidebar-width * 2;
 $page-sidebar-profile-width: $sidebar-width * 1.5;
 $nav-main-height: 2 * $size-20;
+
+// $sidebar-width: $size * 13;
 
 $font-primary: "Axiforma-Regular";
 $font-bold: "Axiforma-Bold";
 $font: $font-primary;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-light !important;
+}
+
+// .page-sidebar {
+//     margin-left: $size !important;
+// }
+
+.btn-blue {
+    background-color: $brand-blue;
+}
+
+
+
+// .content {
+//     padding: $size !important;
+// }

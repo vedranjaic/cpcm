@@ -1,0 +1,51 @@
+<div class="table-responsive">
+    @@include('_table-filter-labels.html')
+
+    <table class="table table-nocheckbox @@table-class">
+        <thead>
+            <tr>
+                <!-- <th class="select-all">
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="selectalltr" id="selectalltr">
+                        <label for="selectalltr" title=" Select all"></label>
+                    </div>
+                </th> -->
+
+                @@loop('_table-thead.html', [
+                { "th-class": "", "th-heading": "Šifra", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Status", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Telekom operater", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Proizvođač softvera", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Održavatelj softvera", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Softver", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Akcija", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"}
+                ])
+                <!-- 
+                <th class="column-actions">
+                    <span>Profile</span>
+                </th> -->
+            </tr>
+        </thead>
+        <tbody>
+            @@include('_table-row-cr.html')
+            @@include('_table-row-cr.html')
+
+            <!-- @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html') -->
+        </tbody>
+    </table>
+
+</div>
+<!-- /.table-responsive -->
+
+<!-- @@include('_table-footer.html', {
+"table-footer--hidden": "@@table-footer--hidden"
+}) -->

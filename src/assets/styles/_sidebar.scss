@@ -1,28 +1,170 @@
+@keyframes activeNavLink {
+    0% {
+        width: 5px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
 .sidebar {
     padding-top: $size;
 
-    @include breakpoint(sm) {
-        height: calc(100vh - (#{$navbar-height} + #{$nav-main-height}));
-        border-right: 1px solid grey(200);
-    }
-
-    .menu-items {
+    &.sidebar-rpo {
+        background-color: rgba($brand-blue, 1);
+        padding-top: 0;
         display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
 
-        @include breakpoint(sm) {
+        .logo-footer {
+            margin-top: auto;
+            width: 50%;
+            align-self: center;
+            display: flex;
             flex-direction: column;
-        }
 
-        .menu-item {
-            a {
-                border-bottom: 0;
+            svg {
+                filter: drop-shadow(2px 2px 2px $black);
+            }
+
+            span {
+                display: block;
+                margin: 0 auto;
+                font-size: $font-size-10;
+                margin-bottom: $size / 3;
+                margin-top: $size / 3;
             }
         }
     }
 
-    .logo-footer {
-        display: none;
+    // Menu items
+    .menu-items {
+
+        .menu-item {
+
+            &>a {
+                // @include transition(background-color color);
+                display: flex;
+                align-items: center;
+                padding-left: $size + 0.625;
+                padding-right: $size-20;
+                padding-top: $size;
+                padding-bottom: $size;
+                border-bottom: none;
+                position: relative;
+
+                // border-left: 3px solid $brand-blue;
+                &::before {
+                    transition: linear width 0.2s;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    width: 0px;
+                    height: 100%;
+                    background-color: $brand-blue;
+                }
+
+                @include hover-focus {
+                    &::before {
+                        width: 5px;
+                        background-color: lighten($brand-blue, 10%);
+                        transition: linear width 0.2s;
+                    }
+
+                    background-color: transparent;
+                    color: $menu-item-active-color;
+                }
+
+                .sidebar-closed & {
+                    justify-content: space-around;
+
+                    @include hover-focus {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                &>a {
+                    // pointer-events: none;
+                    background-color: transparent;
+
+                    &::before {
+                        animation: activeNavLink;
+                        animation-duration: 0.4s;
+                        animation-timing-function: linear;
+                        animation-fill-mode: forwards;
+                        background-color: lighten($brand-blue, 10%);
+                    }
+
+                    .menu-item--icon {
+                        i {
+                            font-size: $size-20;
+                            color: $grey-200;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Menu item icon
+        .menu-item--icon {
+            // flex-basis: 25px;
+            margin-right: $size;
+            position: relative;
+            color: lighten($brand-blue, 10%);
+
+            i {
+                font-size: $size-20;
+            }
+        }
+
+        // Menu item title
+        .menu-item--title {
+            @extend %text-overflow;
+            flex: 1;
+            font-weight: $font-weight-light;
+            font-size: $font-size-15;
+            opacity: 1;
+            position: relative;
+            // color: lighten($brand-teal, 35%);
+
+            .sidebar-closed & {
+                opacity: 0;
+            }
+        }
+    }
+
+}
+
+//Profile sidebar 
+.page-sidebar--profile {
+    .panel {
+        // background-color: $grey-100;
+
+        .panel-header--sticky {
+            background-color: $white !important;
+            // background-color: lighten($brand-blue, 10%) !important;
+            display: flex;
+            justify-content: space-between;
+            line-height: $navbar-height;
+            padding: 0 0 0 $size;
+
+            .section-title {
+                color: $grey-200;
+            }
+
+        }
+    }
+
+    .profile-info--sidebar {
+        color: $brand-blue;
+        margin-bottom: $size / 2;
+        padding-bottom: $size / 2;
+        border-bottom: 1px dotted $grey-100;
     }
 }

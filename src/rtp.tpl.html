@@ -10,46 +10,21 @@
 
 <div class="container">
   @@include('assets/components/_navbar.html')
-  <!-- @@include('assets/components/_navbar-tabs.html', {
-  "classActiveSearch": "active"
-  }) -->
 
   <div class="content-container">
+
     @@include('assets/components/page/_sidebar-menu.html')
+    <!-- </div> -->
     <div class="content">
-      <!-- <div class="tab-content"> -->
-      <!-- <div role="tabpanel" class="tab-pane active" id="RTPSearch"> -->
+
+      <div class="page-content">
+
+        @@include('assets/components/page/_page-header--stats.html')
+
+      </div>
 
       <div class="page-content page-sidebar--toggle" id="demo-page-search-results">
-        <section class="panel panel-page">
-          <header class="panel-header panel-header--sticky">
-            <h4 class="section-title">Search Results</h4>
 
-            <ul class="panel-header--actions list-inline">
-              <li>
-                <a href="#" class="btn btn-primary" id="filter-modal"><i class="icon fa fa-clone"></i> Compare
-                  selected</a>
-              </li>
-              <li>
-                <a href="#" class="btn btn-dark">
-                  <i class="icon fa fa-download"></i>
-                  Export to .xls
-                </a>
-              </li>
-            </ul>
-          </header>
-          <!-- /.panel-header -->
-
-          <div class="panel-body">
-            @@include('assets/components/table/_table.html', {
-            "table-class": "table table-hover",
-            "table-sort-filter--hidden": "",
-            "table-footer--hidden": ""
-            })
-          </div>
-          <!-- /.section-body -->
-        </section>
-        <!-- /.panel -->
         @@include('assets/components/page/_page-sidebar-profile.html', {
         "page-sidebar--heading-hidden": "hidden" })
       </div>

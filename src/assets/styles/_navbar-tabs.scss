@@ -1,24 +1,24 @@
 .navbar-tabs {
   display: flex;
-  z-index: 1000;
-  // justify-content: space-between;
-
-  @include position-sticky($navbar-height);
+  z-index: 100;
+  top: 0;
+  position: sticky;
 
   &.nav-main {
-    padding-left: $size-30 / 2;
-    background-color: grey(200);
-    height: 2 * $size-20;
-
-    @include breakpoint(sm) {
-      padding-left: $size-30;
-    }
+    padding-left: 0;
+    height: $navbar-height;
+    background-color: lighten($brand-blue, 10%);
+    margin-bottom: $size-30;
+    box-shadow: 0 8px 6px -6px $black;
 
     .nav-main--current-app {
       display: flex;
       flex-direction: row;
       align-items: center;
       white-space: nowrap;
+      width: $sidebar-width;
+      padding-left: $size-30;
+
 
       .dropdown {
         display: flex;
@@ -29,9 +29,7 @@
         position: absolute;
         top: 100%;
         display: flex;
-        width: 100%;
         flex-direction: column;
-        box-shadow: 0 5px 10px darken(grey(100), 10%);
 
         @include breakpoint(sm) {
           opacity: 1;
@@ -40,21 +38,7 @@
           min-width: auto;
           padding-top: 0;
           padding-bottom: 0;
-          box-shadow: none;
         }
-      }
-    }
-  }
-
-  .dropdown {
-    position: static;
-
-    .dropdown-tabs {
-      left: 0;
-      pointer-events: none;
-
-      @include breakpoint(sm) {
-        pointer-events: all;
       }
     }
   }
@@ -63,68 +47,103 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: $size-10;
     line-height: 1;
+    color: $white;
 
-    &::after {
-      content: '\f105';
-      font-family: $font-fa;
-      line-height: 1;
+    i {
+      font-size: $size-20;
+      margin-right: $size;
     }
 
-    svg {
-      height: 30px;
-      width: 30px;
-      margin-right: $size-10;
+    // &::after {
+    //   content: '\f105';
+    //   font-family: $font-fa;
+    //   line-height: 1;
+    // }
 
-      path,
-      rect,
-      polyline,
-      circle,
-      line {
-        stroke: grey(600);
-      }
-    }
+    // svg {
+    //   height: 30px;
+    //   width: 30px;
+    //   margin-right: $size;
+
+    //   path,
+    //   rect,
+    //   polyline,
+    //   circle,
+    //   line {
+    //     stroke: $white;
+    //   }
+    // }
   }
 
   .nav-main--title {
-    color: grey(600);
+    // color: $white;
     font-weight: normal;
     white-space: nowrap;
-    padding-right: $size-30;
+    // font-size: $font-size-14;
+    color: $white;
+    // text-transform: uppercase;
+    // padding-right: $size-30;
 
     &::after {
       @include breakpoint(sm) {
-        content: '' !important;
+        content: "" !important;
       }
     }
   }
 
   // Nav tabs override
   .nav-tabs {
-    opacity: 0;
+    // opacity: 0;
 
     a {
-      flex: 1;
+      // background-color: grey(100);
+      // background-color: $brand-blue;
+      background-color: transparent;
+      color: grey(300);
+      font-size: $font-size-14;
       padding: 0 $size;
       line-height: 2 * $size-20;
-      background-color: grey(200);
-      color: grey(600);
+
+      @include transition(all);
 
       @include hover-focus {
+        // background-color: transparent;
         background-color: grey(100);
+        transform: scale(1.2);
+        // font-size: $size;
+
+        color: rgba($brand-blue, 0.8);
       }
     }
 
     li {
       display: flex;
+
+      &:first-child {
+        margin-left: $size-30;
+      }
+
+      &:last-child {
+        margin-left: auto;
+
+        // a {
+        //   background: rgba($grey-600, 0.4);
+        // }
+      }
     }
 
     .active {
       a {
         // background-color: grey(100);
         background-color: grey(100);
-        color: grey(600);
+        font-size: $size;
+        pointer-events: none;
+        // background-color: lighten($brand-blue, 10%);
+        // color: grey(600);
+        color: rgba($brand-blue, 0.8);
+
+        // border-bottom: 2px solid $grey-300;
 
         @include hover {
           cursor: default;
@@ -133,13 +152,51 @@
     }
   }
 
-
   .open {
     .nav-tabs {
       opacity: 1;
     }
-    .dropdown-tabs {
-      pointer-events: all;
+  }
+}
+
+.navbar-child {
+  height: auto;
+  width: $size-30;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: none;
+  background-color: transparent;
+
+  // Menu toggle
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    margin-right: $size;
+
+    .bar {
+      background-color: grey(300);
     }
+
+    @include breakpoint(sm) {
+      margin-right: 0;
+    }
+
+    @include hover {
+      .bar {
+        background-color: $white;
+      }
+
+      .bar-middle {
+        width: $size;
+      }
+    }
+  }
+}
+
+.main-menu {
+  a {
+    color: grey(400);
   }
 }

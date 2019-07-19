@@ -15,50 +15,36 @@
 
 	<div class="content-container">
 		@@include('assets/components/page/_sidebar-menu.html',{
-		"classActiveProfile": "active"
+		"classActiveUnits": "active"
 		})
 
 		<div class="content">
-			@@include('assets/components/page/_page-header--info.html')
-			<!-- @@include('assets/components/page/_panel-header-info.html',{
+
+			<div class="page-content">
+				<!-- @@include('assets/components/page/_page-header--info-bu.html') -->
+				<!-- @@include('assets/components/page/_panel-header-info.html',{
 					"panel-header-info-all" : "hidden"
 					}) -->
-			@@include('assets/components/_navbar-tabs.html', {
-			"classActiveProfile" : "active"
-			})
-			<div class="page-content">
-
+				<!-- @@include('assets/components/_navbar-tabs.html', {
+				"classActiveUnits" : "active"
+				}) -->
 
 				<section class="panel panel-page">
 
-					<header class="panel-header panel-header--sticky panel-header--sticky-profile">
-						<h4 class="section-title">History of income</h4>
+					<header class="panel-header panel-header--sticky panel-header--sticky">
+						<div class="form-group form-column form-group--noheight">
+							<!-- <label for="search">Search</label> -->
 
-						<ul class="panel-header--actions list-inline">
-							<li>
-								<a href="#" class="btn btn-dark"><i class="icon fa fa-download"></i> Export to .xls</a>
-							</li>
-						</ul>
-					</header>
-					<!-- /.panel-header -->
-
-					<div class="panel-body">
-
-						<div class="grid">
-							<div class="col-sm-6">
-								<img src="assets/images/prihodi.png" alt="" class="img-responsive" height="88.5%">
+							<div class="input-group">
+								<input type="search" class="form-element form-element-xl" id="search" name="search"
+									aria-label="Search" placeholder="Search business units">
+								<button class="btn btn-dark">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</button>
 							</div>
-							<div class="col-sm-6">
-								<img src="assets/images/stat.png" alt="" class="img-responsive">
-							</div>
+							<!-- /.input-group -->
 						</div>
-						<!-- /.grid -->
-
-					</div>
-					<!-- /.panel-body -->
-
-					<header class="panel-header panel-header--sticky panel-header--sticky-profile">
-						<h4 class="section-title">Business units</h4>
+						<!-- <h4 class="section-title">Business units</h4> -->
 
 						<ul class="panel-header--actions panel-header--actions-height list-inline">
 							<li>

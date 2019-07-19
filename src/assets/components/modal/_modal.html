@@ -1,4 +1,4 @@
-<div class="modal modal-xxl" id="modal">
+<div class="modal modal-md" id="modal">
     <div class="modal-dialog">
 
         <div class="modal-content">
@@ -10,9 +10,145 @@
             <!-- /.modal-header -->
 
             <div class="modal-body">
-                    @@include('../table/_table.html', {
+
+                <!-- @@include('../table/_table.html', {
                         "table-class": "table table-hover table-compare"
-                    })
+                    }) -->
+                <div class="grid">
+                    <div class="col-md-12 sort-row">
+                        <div class="form-radio">
+                            <input type="radio" id="radio1" name="radio-example" value="radio1">
+                            <label for="radio1">Physical Entity</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="radio2" name="radio-example" value="radio2">
+                            <label for="radio2">Legal Entity</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.gird -->
+                <div class="grid">
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="form-group form-column">
+                            <label for="tip">Tip</label>
+                            <input type="text" class="form-element" name="tip" placeholder="Tip" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="podtip">Podtip</label>
+                            <input type="text" class="form-element" name="podtip" placeholder="Podtip" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="porezni_broj">Porezni broj</label>
+                            <input type="number" class="form-element" name="porezni_broj" placeholder="Porezni broj" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="name">Ime</label>
+                            <input type="text" class="form-element" name="name" placeholder="Ime" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="prezime">Prezime</label>
+                            <input type="text" class="form-element" name="prezime" placeholder="Prezime" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="srednje_ime">Srednje ime</label>
+                            <input type="text" class="form-element" name="srednje_ime" placeholder="Srednje ime" />
+                        </div>
+
+                    </div>
+                    <!-- form-group end -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="form-group form-column">
+                            <label for="tip">Naziv</label>
+                            <input type="text" class="form-element" name="tip" placeholder="Naziv" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="kratkinaziv">Kratki naziv</label>
+                            <input type="text" class="form-element" name="kratkinaziv" placeholder="Kratki naziv" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="datumrodenja">Datum rođenja</label>
+                            <input type="date" class="form-element" name="datumrodenja" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="datum_osnutka">Datum osnutka</label>
+                            <input type="date" class="form-element" name="datum_osnutka" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="regu_kat">Registriran u katalogu</label>
+                            <input type="text" class="form-element" name="regu_kat"
+                                placeholder="Registriran u katalogu" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="ID_num">Identifikacijski broj</label>
+                            <input type="text" class="form-element" name="ID_num" placeholder="ID broj" />
+                        </div>
+
+                    </div>
+                    <!-- form-group end -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="form-group form-column">
+                            <label for="grad">Grad</label>
+                            <input type="text" class="form-element" name="grad" placeholder="Grad" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="ulica">Ulica</label>
+                            <input placeholder="Ulica" type="text" class="form-element" name="ulica" size="10" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="kucnibroj">Kućni broj</label>
+                            <input type="number" class="form-element" name="kucnibroj" placeholder="Kućni broj" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="drzava">Država</label>
+                            <input type="text" class="form-element" name="drzava" placeholder="Država" />
+                        </div>
+
+                    </div>
+                    <!-- form-group end -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="form-group form-column">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-element" name="status" placeholder="Status" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="djelatnost">Djelatnost</label>
+                            <input type="text" class="form-element" name="djelatnost" placeholder="Djelatnost" />
+                        </div>
+
+                        <div class="form-group form-column">
+                            <label for="date">Datum</label>
+                            <input type="date" class="form-element" name="date" size="10" />
+                        </div>
+
+                    </div>
+                    <!-- form-group end -->
+
+                    <div class="col-md-12 text-right">
+                        <button class="btn btn-dark btn-lg">Filter</button>
+                    </div>
+                </div>
+                <!-- /.grid -->
             </div>
             <!-- /.modal-body -->
 
@@ -30,7 +166,7 @@
 
         </div>
         <!-- /.modal-content -->
-        
+
     </div>
     <!-- /.modal-dialog -->
 </div>
