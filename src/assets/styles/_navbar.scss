@@ -1,0 +1,14 @@
+.navbar {
+    box-shadow: $box-shadow-panel;
+
+    .branding {
+        &.branding-header {
+            // padding: 0;
+
+            .logo {
+                margin-right: $size / 2;
+            }
+        }
+
+    }
+}

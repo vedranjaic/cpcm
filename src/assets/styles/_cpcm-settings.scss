@@ -2,12 +2,23 @@ $page-sidebar-width: $sidebar-width * 2;
 $page-sidebar-profile-width: $sidebar-width * 1.5;
 $nav-main-height: 2 * $size-20;
 
-// $sidebar-width: $size * 13;
+$sidebar-height: calc(100vh - #{$navbar-height} - (#{$size} * 2));
+
+// $sidebar-width: $size * 14.625;
 
 $font-primary: "Axiforma-Regular";
 $font-bold: "Axiforma-Bold";
 $font: $font-primary;
 
+// extra colors
+
+$brand-blue-300: #8EA2C7;
+$brand-blue-400: #5B6D8F;
+$brand-blue-600: #1A233B;
+
+$box-shadow-panel: 2px 2px 6px -1px $grey-200;
+$box-shadow-panel-dark: 2px 2px 6px -1px $grey-400;
+$box-shadow-navbar: 0 8px 6px -6px $black;
 
 h1,
 h2,
@@ -18,16 +29,11 @@ h6 {
     font-weight: $font-weight-light !important;
 }
 
-// .page-sidebar {
-//     margin-left: $size !important;
-// }
+.content {
+    padding: $size $size-30 $size calc(#{$size-30} - #{$size}) !important;
+}
+
 
 .btn-blue {
     background-color: $brand-blue;
 }
-
-
-
-// .content {
-//     padding: $size !important;
-// }

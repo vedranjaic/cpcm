@@ -7,9 +7,11 @@
   &.nav-main {
     padding-left: 0;
     height: $navbar-height;
-    background-color: lighten($brand-blue, 10%);
+    // background-color: lighten($brand-blue, 10%);
+    // background-color: $brand-blue-400;
+    background-color: $brand-blue-600;
     margin-bottom: $size-30;
-    box-shadow: 0 8px 6px -6px $black;
+    // box-shadow: $box-shadow-navbar;
 
     .nav-main--current-app {
       display: flex;
@@ -17,7 +19,7 @@
       align-items: center;
       white-space: nowrap;
       width: $sidebar-width;
-      padding-left: $size-30;
+      padding-left: $size + 0.625;
 
 
       .dropdown {
@@ -49,10 +51,19 @@
     justify-content: center;
     line-height: 1;
     color: $white;
+    @include transition(opacity);
+    opacity: 1;
+    font-size: $font-size-15;
+
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     i {
       font-size: $size-20;
       margin-right: $size;
+      // color: $brand-blue;
     }
 
     // &::after {
@@ -76,21 +87,23 @@
     // }
   }
 
-  .nav-main--title {
-    // color: $white;
-    font-weight: normal;
-    white-space: nowrap;
-    // font-size: $font-size-14;
-    color: $white;
-    // text-transform: uppercase;
-    // padding-right: $size-30;
+  // .nav-main--title {
+  //   font-weight: normal;
+  //   white-space: nowrap;
+  //   color: $white;
+  //   opacity: 1;
+  //   @include transition(opacity);
 
-    &::after {
-      @include breakpoint(sm) {
-        content: "" !important;
-      }
-    }
-  }
+  //   &:hover {
+  //     opacity: 0.6;
+  //   }
+
+  //   &::after {
+  //     @include breakpoint(sm) {
+  //       content: "" !important;
+  //     }
+  //   }
+  // }
 
   // Nav tabs override
   .nav-tabs {
@@ -137,7 +150,7 @@
       a {
         // background-color: grey(100);
         background-color: grey(100);
-        font-size: $size;
+        font-size: $font-size-14;
         pointer-events: none;
         // background-color: lighten($brand-blue, 10%);
         // color: grey(600);
@@ -192,11 +205,5 @@
         width: $size;
       }
     }
-  }
-}
-
-.main-menu {
-  a {
-    color: grey(400);
   }
 }
