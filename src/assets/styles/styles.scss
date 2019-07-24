@@ -28,7 +28,6 @@
 
 @import "cpcm-settings.scss";
 
-
 @import "../../../node_modules/initium/src/assets/styles/_framework.scss";
 @import "../../../node_modules/initium/src/assets/styles/_components.scss";
 
@@ -40,6 +39,7 @@
 @import "navbar.scss";
 @import "search.scss";
 @import "sidebar.scss";
+@import "table.scss";
 @import "themify-icons.scss";
 
 // @import "dashboard.scss";
@@ -79,8 +79,6 @@
     width: auto;
     background: transparent;
     margin: 0 $size / 3;
-
-
   }
 }
 
@@ -95,24 +93,41 @@
         display: flex;
         align-items: center;
       }
-
     }
   }
 }
 
 .form-group {
+  .form-element {
+    padding: 0 $size;
+    font-size: $font-size-12;
+    color: $brand-blue;
+    border: 1px solid $grey-200;
 
-  &.form-group--noheight {
+    transition: ease-in border 0.2s;
 
-    .form-element {
+    &:focus {
+      border: 1px solid $brand-blue;
 
-      padding: 0 $size;
+      // &::placeholder {
+      //   opacity: 0;
+      // }
+    }
 
+    &::placeholder {
+      font-size: $font-size-12;
+    }
+
+    &.form-element--margin-right {
+      margin-right: $size * 0.16;
     }
   }
 
-  margin-bottom: 0;
-  flex-grow: 1;
+  &.form-group--noheight {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
 
   // Form column - Label above input
   &.form-column {
@@ -136,7 +151,6 @@
   }
 }
 
-
 .status-active {
   font-size: $font-size-14;
   color: lighten($brand-teal, 30%);
@@ -147,7 +161,6 @@
   align-items: center;
 }
 
-
 .panel-basic {
   .panel-body {
     padding-top: $size !important;
@@ -156,6 +169,7 @@
 
 .page-content {
   align-items: stretch !important;
+  // box-shadow: $box-shadow-panel;
 }
 
 .page-sidebar--toggle {
@@ -166,7 +180,6 @@
   // overflow: hidden;
   white-space: nowrap;
   margin-left: 0;
-
 
   .page-sidebar--true & {
     width: calc(25% - #{$size}) !important;
@@ -227,6 +240,23 @@
   }
 }
 
+.btn {
+  i {
+    margin: 0 $size * 0.16;
+  }
+
+  @include hover-focus {
+    transform: translateY(-1px);
+    box-shadow: 0 $size / 2 $size-10 rgba($black, 0.2);
+
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 $size / 4 $size-10 / 2 rgba($black, 0.2);
+  }
+}
+
 @keyframes test {
   0% {
     opacity: 0;
@@ -272,8 +302,6 @@
     // height: calc(100vh - #{$navbar-height} - #{$navbar-tabs-height});
   }
 }
-
-
 
 .tab-content {
   margin-top: $size;
@@ -325,7 +353,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: $size;
-    background-color: #FFF;
+    background-color: #fff;
   }
 }
 
@@ -348,7 +376,6 @@
       &-cr {
         top: 6.25rem;
       }
-
     }
 
     span {
@@ -360,7 +387,6 @@
         display: inline;
       }
     }
-
   }
 }
 
@@ -371,13 +397,11 @@
   div:not(:first-child) {
     margin-left: $size-10;
   }
-
 }
 
 .table-sort-filter {
   list-style: none;
   display: flex;
-
 }
 
 .dropdown {
@@ -396,7 +420,6 @@
       }
     }
   }
-
 }
 
 .table-nocheckbox {
@@ -406,6 +429,38 @@
         padding-left: $size / 2 !important;
       }
     }
-
   }
 }
+
+.ti-search {
+  font-weight: bold !important;
+}
+
+// .pagination {
+//   li {
+//     &:last-child {
+//       a {
+//         display: flex;
+//         align-items: center;
+
+//         &::after {
+//           content: "\e649";
+//           font-family: 'themify';
+//         }
+//       }
+//     }
+
+//     &:first-child {
+//       a {
+//         display: flex;
+//         align-items: center;
+
+//         &::before {
+//           content: "\e64a";
+//           font-family: 'themify';
+//         }
+//       }
+//     }
+
+//   }
+// }

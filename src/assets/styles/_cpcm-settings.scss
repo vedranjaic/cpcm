@@ -19,6 +19,8 @@ $brand-blue-600: #1A233B;
 $box-shadow-panel: 2px 2px 6px -1px $grey-200;
 $box-shadow-panel-dark: 2px 2px 6px -1px $grey-400;
 $box-shadow-navbar: 0 8px 6px -6px $black;
+$box-shadow-button: 0 3px 7px rgba($black, .3);
+$form-element-size: $size * 2.2;
 
 h1,
 h2,
@@ -29,11 +31,40 @@ h6 {
     font-weight: $font-weight-light !important;
 }
 
+// --- [ Theme colors ] --- //
+$basic: $white !default;
+$primary: $brand-teal !default;
+$secondary: $brand-purple !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $grey-100 !default;
+$dark: $grey-600 !default;
+$brand-blue: $brand-blue !default;
+$brand-blue-400: $brand-blue-400 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("basic": $basic,
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark,
+        "brand-blue": $brand-blue,
+        "brand-blue-400": $brand-blue-400),
+    $theme-colors);
+
+
+
 .content {
     padding: $size $size-30 $size calc(#{$size-30} - #{$size}) !important;
 }
 
 
-.btn-blue {
-    background-color: $brand-blue;
-}
+// .btn-blue {
+//     background-color: $brand-blue;
+// }

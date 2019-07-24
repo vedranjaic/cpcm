@@ -117,14 +117,14 @@
                         animation-duration: 0.4s;
                         animation-timing-function: linear;
                         animation-fill-mode: forwards;
-                        background-color: $brand-blue-300;
+                        background-color: $brand-blue-400;
                     }
 
                     .menu-item--icon {
                         i {
-                            font-size: $size;
+                            // font-size: $size-20;
                             // color: $grey-200;
-                            color: $brand-blue;
+                            color: $brand-blue-600;
 
                         }
                     }
