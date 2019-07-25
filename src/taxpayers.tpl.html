@@ -105,6 +105,86 @@
         "page-sidebar--heading-hidden": "hidden" })
       </div>
       <!-- /.page-content -->
+      <div class="page-content page-sidebar--toggle" id="demo-page-search-results">
+
+        <section class="panel panel-page">
+          <!-- @@include('assets/components/page/_page-header--info.html') -->
+          <header class="panel-header panel-header--sticky">
+            <!-- <h4 class="section-title">Search Results</h4> -->
+            <div class="form-group form-column form-group--noheight">
+              <!-- <label for="search">Search</label> -->
+
+              <div class="input-group">
+
+                <input type="search" class="form-element form-element-xl form-element--margin-right" id="search"
+                  name="search" aria-label="Search" placeholder="Search taxpayer">
+                <button class="btn btn-brand-blue-400">
+                  <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+                  <i class="ti-search"></i>
+                  <!-- Start searching... -->
+                </button>
+              </div>
+              <!-- /.input-group -->
+            </div>
+
+            <ul class="panel-header--actions panel-header--actions-height list-inline">
+              <li>
+                <a href="#" class="btn btn-brand-blue-400" id="filter-modal">
+                  <i class="ti-filter"></i>
+                  <!-- Filter -->
+                </a>
+              </li>
+              <li class="dropdown dropdown--column">
+                <a href="#" class="btn btn-brand-blue dropdown-toggle">
+                  <i class="ti-layout-column2"></i>
+                  <!-- Add / Remove column -->
+                </a>
+                <ul class="dropdown-menu dropdown-menu--right animate">
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="tablecheckbox1">
+                      <label for="tablecheckbox1">Djelatnost</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="tablecheckbox1">
+                      <label for="tablecheckbox1">Datum od</label>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="tablecheckbox1">
+                      <label for="tablecheckbox1">Datum do</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="tablecheckbox1">
+                      <label for="tablecheckbox1">Registriran u katalogu</label>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </header>
+          <!-- /.panel-header -->
+
+          <div class="panel-body">
+            @@include('assets/components/table/_table.html', {
+            "table-class": "table table-hover",
+            "table-sort-filter--hidden": "",
+            "table-footer--hidden": ""
+            })
+          </div>
+          <!-- /.section-body -->
+        </section>
+        <!-- /.panel -->
+        @@include('assets/components/page/_page-sidebar-profile.html', {
+        "page-sidebar--heading-hidden": "hidden" })
+      </div>
+      <!-- /.page-content -->
       <!-- </div> -->
       <!-- /.tab-pane -->
       <!-- </div> -->

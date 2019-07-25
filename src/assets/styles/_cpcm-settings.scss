@@ -22,6 +22,11 @@ $box-shadow-navbar: 0 8px 6px -6px $black;
 $box-shadow-button: 0 3px 7px rgba($black, .3);
 $form-element-size: $size * 2.2;
 
+$table-row-hover-bg: lighten($grey-100, 2%);
+$table-row-active-bg: darken($grey-100, 3%);
+$table-row-striped: lighten($grey-100, 1%);
+
+
 h1,
 h2,
 h3,

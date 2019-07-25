@@ -31,7 +31,9 @@
 @import "../../../node_modules/initium/src/assets/styles/_framework.scss";
 @import "../../../node_modules/initium/src/assets/styles/_components.scss";
 
+@import "themify-icons.scss";
 @import "business-activities.scss";
+@import "checkbox.scss";
 @import "dashboard.scss";
 @import "header.scss";
 @import "login.scss";
@@ -40,7 +42,6 @@
 @import "search.scss";
 @import "sidebar.scss";
 @import "table.scss";
-@import "themify-icons.scss";
 
 // @import "dashboard.scss";
 
@@ -72,6 +73,7 @@
 .help-text {
   display: flex;
   align-items: center;
+  font-size: $font-size-14;
 
   .form-element {
     min-width: 2rem;
@@ -79,6 +81,7 @@
     width: auto;
     background: transparent;
     margin: 0 $size / 3;
+    border-radius: 0;
   }
 }
 
@@ -169,7 +172,11 @@
 
 .page-content {
   align-items: stretch !important;
+
   // box-shadow: $box-shadow-panel;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .page-sidebar--toggle {

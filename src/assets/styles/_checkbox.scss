@@ -1,0 +1,40 @@
+input[type=checkbox] {
+
+	&+label {
+
+		&::before {
+			@include transition(color);
+			content: "\e6e8" !important;
+			font-family: 'themify' !important;
+			color: $brand-blue-400 !important;
+			font-size: $size;
+
+		}
+
+		@include hover-focus {
+			cursor: pointer;
+
+			&::before {
+				color: $brand-blue !important;
+			}
+		}
+	}
+
+	// Checked styles
+	&:checked {
+		&+label {
+			color: $brand-blue;
+
+			// Checkbox
+			&::before {
+				content: "\e64d" !important;
+				color: $brand-blue !important;
+				font-family: 'themify' !important;
+				font-size: $size * 1.15;
+				// padding: $size / 3;
+				// background-color: rgba($brand-blue-400, 0.2%);
+				// border-radius: 50%;
+			}
+		}
+	}
+}

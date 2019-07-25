@@ -1,20 +1,12 @@
-////
-/// Tables
-//
-
-// Table responsive wrap
+// Table
 .table-responsive {
-    flex: 1;
-    overflow-x: auto;
-    // margin-bottom: $size-30;
+    max-height: calc(100vh - 15.25rem);
+    position: relative
 }
 
-
-
-// Table
 .table {
     width: 100%;
-    color: grey(400);
+    color: $grey-600;
 
     // Caption
     caption {
@@ -64,7 +56,7 @@
                 span {
                     text-transform: uppercase;
                     text-decoration: none;
-                    font-size: $font-size-12;
+                    font-size: $font-size-13;
                     font-family: $font-bold;
                 }
 
@@ -162,29 +154,14 @@
     // Tbody
     tbody {
         tr {
-
-            // Active rows
-            &.active {
-                td {
-                    background-color: $table-row-active-bg;
-                    border-top-color: transparent;
-                }
-
-                &+.active {
-                    td {
-                        border-top: 1px dotted $white !important;
-                    }
-                }
+            &:nth-child(even) {
+                background-color: $table-row-striped;
             }
 
-            td {
-                border-top: 1px dotted $table-row-active-bg;
-                padding: $size-10 $size / 2;
-                font-size: $font-size-14;
 
-                @include breakpoint(sm) {
-                    padding: $size-10 $size;
-                }
+            td {
+                font-size: $font-size-13;
+                color: $grey-500;
 
                 &.column-highlight {
                     font-family: $font-bold;
@@ -385,6 +362,7 @@
     justify-content: space-between;
     padding-top: $size;
     align-items: center;
+    height: $navbar-height;
 
     @include breakpoint(sm) {
         flex-direction: row;
