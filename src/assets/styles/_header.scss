@@ -2,7 +2,7 @@
     right: 0;
     width: 100%;
     // text-align: center;
-    padding: 0 0 0 $size;
+    padding: 0 0 0 $size / 2;
     // line-height: $size * 7.5;
     height: $size * 7.5;
     // background: $white;
@@ -15,6 +15,12 @@
     // justify-content: center;
     // align-items: baseline;
     // flex-direction: column;
+
+    .dropdown-toggle {
+        // color: $brand-blue-400;
+        font-size: $font-size-20;
+
+    }
 
     .section-title {
         color: $brand-blue;
@@ -71,7 +77,8 @@
 .header-info--sticky {
     &.sticky {
         .dropdown-toggle {
-            color: $white;
+            color: $grey-300;
+            font-size: $font-size-18;
 
         }
 
@@ -84,9 +91,9 @@
         // width: inherit;
         // line-height: $navbar-height;
         height: $navbar-height;
-        background: lighten($brand-blue, 10%);
+        background: $grey-100;
         text-align: left;
-        padding-left: 20px;
+        padding-left: $size / 2;
         position: sticky;
         top: -$size;
         align-items: center;
