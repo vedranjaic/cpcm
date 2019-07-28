@@ -1,0 +1,383 @@
+// Table
+.table-responsive {
+    max-height: calc(100vh - 15.25rem);
+    position: relative
+}
+
+.table {
+    width: 100%;
+    color: $grey-600;
+
+    // Caption
+    caption {
+        padding: $size-10;
+        text-transform: uppercase;
+        font-size: $font-size-13;
+        font-weight: 700;
+    }
+
+    // Thead
+    thead {
+        tr {
+            th {
+                border-bottom: 2px solid $table-row-active-bg;
+                padding: $size / 5 $size / 4 $size / 5 $size / 2;
+                text-align: left;
+                white-space: nowrap;
+
+                @include breakpoint(sm) {
+                    padding: $size / 5 $size / 3 $size / 5 $size;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                @include hover-focus {
+
+                    // Show table sorter and filter on hover
+                    .table-sort-filter {
+                        opacity: 1;
+
+                    }
+
+                    &.column-actions {
+                        .icon {
+                            background-color: lighten(grey(400), 35%);
+                        }
+                    }
+                }
+
+                span {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: $font-size-13;
+                    font-family: $font-bold;
+                }
+
+                &.select-all {
+                    .form-checkbox {
+                        justify-content: center;
+                    }
+                }
+
+                &.column-highlight {
+                    @include border-radius-top($radius / 2);
+                    background-color: $table-row-active-bg !important;
+
+                    .table-sort-filter {
+                        opacity: 1;
+                    }
+
+                    .table-filter {
+                        .dropdown-toggle {
+                            background-color: $white;
+                            color: grey(400);
+                        }
+                    }
+                }
+
+                // &.column-actions,
+                // .table-filter {
+                //     &.open {
+                //         .icon {
+                //             background-color: lighten(grey(400), 38%);
+                //         }
+                //     }
+                // }
+
+
+                .thead-th {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                // Table sort and filter container
+                .table-sort-filter {
+                    @include transition(opacity);
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    padding-left: $size / 2;
+                    opacity: 0;
+                    list-style-type: none;
+                }
+
+                // Table sort
+                .table-sort {
+                    @include transition(opacity);
+                    font-size: $size;
+                    margin-right: $size-10;
+
+                    svg {
+                        width: 10px;
+                        height: 12px;
+
+                        rect {
+                            fill: grey(400);
+                        }
+                    }
+
+                    .sortDesc {
+                        display: none;
+                    }
+                }
+
+                .table-filter {
+                    .dropdown-toggle {
+                        @include transition(background-color);
+                        padding: $size-10 / 2 $size / 2;
+                        background-color: lighten(grey(400), 20%);
+                        color: $white;
+                        font-size: $font-size-12;
+
+                        @include border-radius($radius / 2)
+                    }
+
+                    &.open {
+                        .dropdown-toggle {
+                            background-color: grey(400);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Tbody
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: $table-row-striped;
+            }
+
+
+            td {
+                font-size: $font-size-13;
+                color: $grey-500;
+
+                &.column-highlight {
+                    font-family: $font-bold;
+                    font-weight: $font-weight-bold;
+                    background-color: $table-row-active-bg !important;
+                }
+            }
+        }
+    }
+
+    // All rows and columns
+    tr {
+
+        th,
+        td {
+            box-sizing: border-box;
+
+            &.select-all,
+            &.select {
+                width: 45px;
+
+                .form-checkbox {
+                    @include transition(color);
+                    font-size: $font-size-18;
+                    color: grey(400);
+                }
+            }
+
+            &.row-actions {
+                width: 45px;
+                color: grey(400);
+            }
+        }
+    }
+}
+
+
+
+
+
+////
+/// Table striped
+//
+.table-striped {
+    thead {
+        margin-bottom: 4px;
+    }
+
+    tbody {
+        &:not(.thead) {
+            tr {
+                &:nth-child(odd) {
+                    td {
+                        background-color: lighten(grey(100), 2%);
+                    }
+                }
+            }
+        }
+
+        tr {
+            td {
+                border-top-color: transparent !important;
+            }
+        }
+    }
+}
+
+
+
+////
+/// Table standalone
+//
+.table-standalone {
+    border-collapse: separate;
+    border-spacing: 0 4px;
+
+    thead {
+        tr {
+            th {
+                border-bottom: 0 !important;
+
+                &.column-highlight {
+                    background-color: $table-standalone-row-active-bg;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            @include border-radius($radius / 2);
+
+            &.active {
+                td {
+                    background-color: $table-standalone-row-active-bg !important;
+                    border-top: 0 !important;
+                }
+
+                &+.active {
+                    td {
+                        border-top: 0 !important;
+                    }
+                }
+            }
+
+            th {
+                padding: $size-10 $size / 2;
+                background-color: rgba($white, 0.5);
+                text-align: left;
+                text-transform: uppercase;
+                font-size: $font-size-12;
+
+                @include border-radius-left($size / 2);
+
+                @include breakpoint(sm) {
+                    padding: $size-10 $size;
+                }
+            }
+
+            td {
+                @include transition(background-color);
+                border-top: 0 !important;
+                background-color: $white;
+
+                &.column-highlight {
+                    background-color: $table-standalone-row-active-bg !important;
+                }
+
+                &:first-child {
+                    @include border-radius-left($radius);
+                }
+
+                &:last-child {
+                    @include border-radius-right($radius);
+                }
+            }
+        }
+    }
+
+    &.table-hover {
+        tbody {
+            tr {
+                @include transition(transform);
+
+                @include hover-focus-active {
+                    td {
+                        background-color: $table-standalone-row-hover-bg;
+                    }
+                }
+
+                // Active and highlighted <tr>
+                &.active {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+////
+/// Table hover
+//
+.table-hover {
+    tbody {
+        tr {
+            @include transition(background-color);
+
+            @include hover-focus-active {
+                cursor: pointer;
+                background-color: $table-row-hover-bg;
+
+                .select,
+                .row-actions {
+
+                    .checkbox,
+                    .icon {
+                        color: theme-colors(primary);
+                    }
+                }
+            }
+
+            // Active and highlighted <tr>
+            &.active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+
+
+// Table footer
+.table-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: $size;
+    align-items: center;
+    height: $navbar-height;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+    }
+
+    .help-text,
+    .pagination {
+        margin: 0;
+    }
+
+    .help-text {
+        margin-bottom: $size;
+
+        @include breakpoint(sm) {
+            margin-bottom: 0;
+        }
+    }
+}

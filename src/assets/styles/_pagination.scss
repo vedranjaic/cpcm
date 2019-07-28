@@ -1,0 +1,28 @@
+// Pagination
+.pagination {
+
+    li {
+
+        &.active {
+            a {
+                color: $white;
+                background-color: $brand-blue;
+            }
+        }
+
+
+        // Page
+        a {
+            @include transition(background-color color);
+            padding: 0.1875rem 0.625rem;
+
+            @include border-radius($radius / 2);
+
+            @include hover-focus-active {
+                background-color: $brand-blue-400;
+            }
+        }
+
+
+    }
+}

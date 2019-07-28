@@ -1,134 +1,133 @@
 <div class="panel panel-login">
 
     <header class="panel-header">
-        <img src="assets/images/neos-new-logo_primary-light.svg" class="login-logo" alt="NEOS" width="120">
+        <img src="assets/images/neos-new-logo_white.svg" class="login-logo" alt="NEOS" width="120">
 
-        <div class="login-intro login-intro--lead">
-            <h5>Welcome back!</h5>
-            <small>Login with credentials you have received in your email.</small>
+        <div class="login-welcome-back">
+            <!-- <h5>Welcome back!</h5>
+            <small>Login with credentials you have <br>received in your email.</small> -->
         </div>
-        <!-- /.login-intro -->
-        
-        <div class="login-intro hidden">
-            <h5>Need an account?</h5>
-            <small>Create your account and start saving money!<br>
-                <a href="#">Sign up</a>
-            </small>
-        </div>
-        <!-- /.login-intro -->
-        
-        <div class="login-intro login-intro--lead hidden">
-            <h5>Sign up!</h5>
-            <small>Create your account and start saving money!</small>
-        </div>
-        <!-- /.login-intro -->
-
-        <div class="login-intro hidden">
-            <h5>Have an account?</h5>
-            <small>Login with credentials you have received in your email.<br>
-                <a href="#">Login</a>
-            </small>
-        </div>
-        <!-- /.login-intro -->
-
-        <div class="login-intro hidden">
-            <h5>Forgot something?</h5>
-            <small>Reset your password or find out what username you used for login.</small>
-        </div>
-        <!-- /.login-intro -->
-
-        <div class="login-intro hidden">
-            <h5>Reset password</h5>
-            <small>Choose your new password and comfirm it to login.</small>
-        </div>
-        <!-- /.login-intro -->
     </header>
     <!-- /.panel-header -->
+    <div class="panel-body panel-body--tabs">
+        <div class="tab-user tab-user--login">
+            <a class="active" href="#">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <span>Log in</span>
+            </a>
+        </div>
+        <div class="tab-user tab-user--signup">
+            <a href="#">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <span>Sign up</span>
+            </a>
+        </div>
 
-    <div class="panel-body">
-        
+    </div>
+    <!-- /.panel-body--tabs -->
+    <div class="panel-body panel-body--tab-content panel-body--tab-content-login">
+
+        <h5 class="login-title">Enter your credentials!</h5>
+
         <form action="index.html">
-            <h3 class="login-title">Login</h3>
-            
-            <div class="form-group form-column">
+            <div class="form-group form-column validation">
                 <label for="loginusername">Username:</label>
                 <input type="text" id="loginusername" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
             </div>
-            <div class="form-group form-column">
+            <div class="form-group form-column validation">
                 <label for="loginpassword">Password:</label>
                 <input type="password" id="loginpassword" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" checked>
+                <label for="checkbox">Remember me</label>
+            </div>
+            <!-- /.form-checkbox -->
+            <div class="reset-credentials">
+                <a href="#">Forgot password / username?</a>
             </div>
             <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
-            <p class="text-center">I forgot my <a href="#">username or password</a>.</p>
         </form>
-        
-        <form action="index.html" class="hidden">
-            <h3 class="login-title">Sign up</h3>
-
-            <div class="form-group form-column">
-                <label for="signupsername">Username:</label>
-                <input type="text" id="signupsername" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-            <div class="form-group form-column">
-                <label for="signupemail">Email:</label>
-                <input type="email" id="signupemail" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-            <div class="form-group form-column">
-                <label for="loginpassword">Password:</label>
-                <input type="password" id="loginpassword" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-            <button class="btn btn-lg btn-success btn-block" type="submit">Register</button>
-            <p class="text-center">I already have an account. <a href="#">Take me to the login!</a></p>
-        </form>
-        
-        <form action="index.html" class="hidden">
-            <h3 class="login-title">Forgot password</h3>
-
-            <div class="form-group form-column">
-                <label for="signupemail">Email:</label>
-                <input type="email" id="signupemail" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-
-            <button class="btn btn-lg btn-success btn-block" type="submit">Reset</button>
-        </form>
-
-        <form action="index.html" class="hidden">
-            <h3 class="login-title">Reset password</h3>
-
-            <div class="form-group form-column">
-                <label for="loginpassword">Choose new password:</label>
-                <input type="password" id="loginpassword" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-
-            <div class="form-group form-column">
-                <label for="loginpassword">Comfirm password:</label>
-                <input type="password" id="loginpassword" class="form-element">
-                <small class="validation-feedback validation-feedback-invalid">This field can't be blank</small>
-            </div>
-
-            <button class="btn btn-lg btn-success btn-block" type="submit">Reset</button>
-        </form>
-        
-        <div class="login-reset-success text-center hidden">
-
-            <i class="icon fa fa-check-circle-o fa-3x text-success"></i>
-            <p class="lead">We have successfully sent out an email to <strong>email@address.com</strong> with a link to reset your password.</p>
-            <p class="help-text">Please follow instructions from email in order to login with a new password. Have a nice day!</p>
-
-            <p class="text-center">Great! Now you can <a href="#">login!</a></p>
-
-        </div>
-        <!-- /.login-reset-success -->
 
     </div>
     <!-- /.panel-body -->
+    <div class="panel-body panel-body--tab-content panel-body--tab-content-signup hidden">
 
+        <h5 class="login-title">Create accout!</h5>
+
+        <form action="index.html">
+            <div class="form-group form-column validation">
+                <label for="loginusername">Name:</label>
+                <input type="text" id="loginusername" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-group form-column validation">
+                <label for="loginpassword">Last name:</label>
+                <input type="password" id="loginpassword" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-group form-column validation">
+                <label for="loginpassword">E-mail:</label>
+                <input type="password" id="loginpassword" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-group form-column validation">
+                <label for="loginpassword">Username:</label>
+                <input type="password" id="loginpassword" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-group form-column validation">
+                <label for="loginpassword">Password:</label>
+                <input type="password" id="loginpassword" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+            <div class="form-group form-column validation">
+                <label for="loginpassword">Repeat password:</label>
+                <input type="password" id="loginpassword" class="form-element">
+                <small class="validation-feedback validation-feedback-invalid">
+                    This field can't be blank
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </small>
+            </div>
+
+            <button class="btn btn-lg btn-success btn-block" type="submit">Sign up</button>
+        </form>
+
+    </div>
+    <!-- /.panel-body -->
 </div>
 <!-- /.panel -->
+
+<!-- <div class="panel panel-welcome">
+    <header class="panel-header">
+        <img src="assets/images/neos-new-logo_white.svg" class="login-logo" alt="NEOS" width="120">
+
+        <div class="login-welcome-back">
+            <h5>Welcome back!</h5>
+            <small>Login with credentials you have <br>received in your email.</small>
+        </div>
+    </header>
+</div> -->

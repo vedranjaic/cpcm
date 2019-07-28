@@ -1,0 +1,51 @@
+<div class="table-responsive">
+    @@include('_table-filter-labels.html')
+
+    <table class="table table-nocheckbox @@table-class">
+        <thead>
+            <tr>
+                <!-- <th class="select-all">
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="selectalltr" id="selectalltr">
+                        <label for="selectalltr" title=" Select all"></label>
+                    </div>
+                </th> -->
+
+                @@loop('_table-thead.html', [
+                { "th-class": "", "th-heading": "Dan", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Ponedjeljak", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Utorak", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Srijeda", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Četvrtak", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Petak", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Subota", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Nedjelja", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Praznik", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Napomena", "table-sort-filter--hidden": "@@table-sort-filter--hidden"}
+
+                ])
+                <!-- 
+                <th class="column-actions">
+                    <span>Profile</span>
+                </th> -->
+            </tr>
+        </thead>
+        <tbody>
+            @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html')
+
+            <!-- @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html')
+            @@include('_table-row-wh.html') -->
+        </tbody>
+    </table>
+
+</div>
+<!-- /.table-responsive -->
+
+<!-- @@include('_table-footer.html', {
+"table-footer--hidden": "@@table-footer--hidden"
+}) -->

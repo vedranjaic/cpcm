@@ -1,4 +1,5 @@
 <div class="table-responsive">
+    @@include('_table-filter-labels.html')
 
     <table class="table @@table-class">
         <thead>
@@ -11,15 +12,17 @@
                 </th>
 
                 @@loop('_table-thead.html', [
-                    { "th-class": "column-highlight", "th-heading": "Naziv", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "Adresa", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "OIB", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "Tip", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "Podtip", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "Porezni broj", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
-                    { "th-class": "", "th-heading": "Status", "table-sort-filter--hidden": "@@table-sort-filter--hidden"}
+                { "th-class": "", "th-heading": "Naziv", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Adresa", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "OIB", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Tip", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Podtip", "table-sort-filter--hidden": "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Porezni broj", "table-sort-filter--hidden":
+                "@@table-sort-filter--hidden"},
+                { "th-class": "", "th-heading": "Status", "table-sort-filter--hidden": "@@table-sort-filter--hidden"}
                 ])
-                
+
                 <th class="column-actions">
                     <span>Profile</span>
                 </th>
@@ -37,15 +40,48 @@
             @@include('_table-row.html')
             @@include('_table-row.html')
             @@include('_table-row.html')
+            <!-- @@include('_table-row.html')
             @@include('_table-row.html')
             @@include('_table-row.html')
             @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html') -->
+            <!-- @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html')
+            @@include('_table-row.html') -->
         </tbody>
     </table>
-    
+
 </div>
 <!-- /.table-responsive -->
 
 @@include('_table-footer.html', {
-    "table-footer--hidden": "@@table-footer--hidden"
+"table-footer--hidden": "@@table-footer--hidden"
 })

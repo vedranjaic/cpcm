@@ -1,0 +1,71 @@
+@@include('assets/components/_head.html')
+
+<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+<div class="container">
+
+	@@include('assets/components/_navbar.html')
+
+	<!-- @@include('assets/components/_navbar-tabs.html', {
+	"classActiveTax": "active"
+	}) -->
+
+	<div class="content-container">
+		@@include('assets/components/page/_sidebar-menu.html',{
+		"classActiveUnits": "active"
+		})
+
+		<div class="content">
+			@@include('assets/components/page/_page-header--info-bu.html')
+			<!-- @@include('assets/components/page/_panel-header-info.html',{
+					"panel-header-info-all" : "hidden"
+					}) -->
+			@@include('assets/components/_navbar-tabs-bu.html', {
+			"classActiveWH" : "active"
+			})
+
+			<div class="page-content">
+
+
+				<section class="panel panel-page">
+					<header class="panel-header panel-header--sticky panel-header--sticky-bu">
+
+						<h4 class="section-title">Working hour</h4>
+
+						<ul class="panel-header--actions panel-header--actions-height list-inline">
+							<li>
+								<a href="#" class="btn btn-primary"><i class="icon fa fa-fw fa-plus"></i> Add
+									new</a>
+							</li>
+
+						</ul>
+					</header>
+					<!-- /.panel-header -->
+
+					<div class="panel-body">
+
+						@@include('assets/components/table/_table-wh.html', {
+						"table-class": "table table-hover",
+						"table-sort-filter--hidden": "hidden"
+						})
+
+					</div>
+					<!-- /.panel-body -->
+				</section>
+
+
+
+			</div>
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-container -->
+
+</div>
+<!-- /.container -->
+
+
+@@include('assets/components/_footer.html')

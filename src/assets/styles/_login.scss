@@ -1,106 +1,350 @@
+@keyframes movePanelHeader {
+    0% {
+        left: 15%;
+    }
+
+    50% {
+        left: 70%;
+    }
+
+    100% {
+        left: 15%;
+    }
+
+}
+
+@keyframes visibilityPanelBody {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
 //Login
 .page-login {
-    .panel {
-        background-color: transparent;
-    }
+    background-image: linear-gradient(to right bottom,
+            rgba($grey-100, 0.7),
+            rgba($grey-300, 0.9));
+    position: relative;
+
 
     .panel-login {
 
-        perspective: 150rem;
+        .login-logo {
+            margin-bottom: 0;
+        }
+
+        width: 60vh;
+        height: 65vh;
+        margin-top: 0;
+        box-shadow: 2px 2px 8px 2px $grey-300;
+        // border-radius: $size;
         position: relative;
-        height: 40vh;
-        width: 40vw;
-
-        .panel-login__side {
-            height: 40vh;
-            transition: all .8s ease;
-            background-color: $white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            backface-visibility: hidden;
-            display: flex;
-
-            &.panel-login__side--front {
-                .login-welcome-back {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
-                    flex-grow: 1;
-
-                    h5 {
-                        margin-bottom: 7px;
-
-                        span {
-                            font-size: $font-size-14;
-                            padding: 0;
-                            color: $white;
-                        }
-                    }
-
-                    p {
-                        padding-left: 0;
-
-                        span {
-                            padding: 0;
-                            font-size: $font-size-12;
-                            color: white;
-                        }
-                    }
-
-                    color: $grey-400;
-                }
-            }
-
-            &.panel-login__side--back {
-                transform: rotateY(180deg);
-
-                .panel-header {
-                    background-color: $white !important;
-
-                    .signin-welcome-back {
-                        h5 {
-                            margin-bottom: 7px;
-                        }
-
-                        color: $grey-400;
-                    }
-                }
-
-                .panel-body--full {
-                    background-color: $brand-blue;
-                }
-            }
-        }
-
-        &.panel-header--ful .panel-login__side--front {
-            transform: rotateY(-180deg);
-        }
-
-        &.panel-header--ful .panel-login__side--back {
-            transform: rotateY(0);
-        }
-
-        .panel-body--full {
-            width: 60%;
-        }
+        // overflow: hidden;
+        display: flex;
+        justify-content: space-between;
 
         .panel-header {
-            width: 40%;
+            background-image: linear-gradient(to right bottom,
+                    rgba($brand-blue, 0.8),
+                    rgba($brand-blue, 0.9));
+
+            box-shadow: 2px 2px 10px 1px $grey-300;
+
+            background-color: $brand-teal !important;
+            background-repeat: no-repeat;
+            background-size: cover;
             display: flex;
             flex-direction: column;
+            justify-content: flex-end;
+            position: absolute;
+            height: 110%;
+            top: -5%;
+            left: 15%;
+            width: 30%;
+            z-index: 1;
+            transition: all 4s linear;
+            // .login-logo {
+            //     margin-bottom: $size-10 !important;
+            // }
         }
+
+        &.panel-header--signin {
+            .panel-header {
+                // left: 70%;
+                animation: movePanelHeader;
+                animation-duration: 1s;
+            }
+
+            .panel-body {
+                &.panel-body--tab-content {
+                    animation: visibilityPanelBody;
+                    animation-duration: 1s;
+                }
+            }
+        }
+
+        &.panel-header--login {
+            .panel-header {
+                // left: 70%;
+                animation: movePanelHeader;
+                animation-duration: 1s;
+            }
+
+            .panel-body {
+                &.panel-body--tab-content {
+                    animation: visibilityPanelBody;
+                    animation-duration: 1s;
+                }
+            }
+
+            // .panel-body {
+            //     &.panel-body--tab-content {
+            //         visibility: hidden;
+            //     }
+            // }
+        }
+
 
         .panel-body {
-            background-color: transparent;
-            margin: 0 auto;
-            max-width: 30%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; // min-width: unset;
-        }
+            min-width: unset;
 
+            &.panel-body--tabs {
+                width: 15%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .tab-user {
+                    height: 20%;
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    a {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        span,
+                        i {
+                            color: $brand-blue;
+                        }
+
+                        &.active {
+                            border-left: 5px solid $brand-blue;
+                            background-color: rgba($brand-teal, 0.3);
+
+                            span,
+                            i {
+                                color: lighten($brand-blue, 0.5);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.panel-body--tab-content {
+                width: 55%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                form {
+                    width: 90%;
+                    display: block;
+                    margin: 0 auto;
+
+                    // background-color: $grey-100;
+                    .validation {
+                        position: relative;
+
+                        .validation-feedback {
+                            position: absolute;
+                            display: flex;
+                            align-items: baseline;
+                            top: $size * 2;
+                            right: $size / 2;
+                            font-size: $font-size-10;
+
+                            i {
+                                margin-left: $size / 4;
+                            }
+                        }
+                    }
+
+                }
+
+                .login-title {
+                    text-align: center;
+                }
+            }
+
+            .reset-credentials {
+                margin-bottom: $size-10;
+                margin-top: $size-10;
+                text-align: right;
+
+                a {
+                    color: $grey-300;
+                    font-size: $font-size-10;
+                }
+            }
+
+            // .form-group {
+            //     display: flex;
+            //     position: relative;
+            //     margin: $size * 2.25 0;
+
+            //     .form-element {
+            //         display: flex;
+            //         background-color: transparent;
+            //         border: none;
+            //         border-bottom: 2px solid $grey-300;
+            //         border-radius: 0;
+            //     }
+
+            //     label {
+            //         font-family: $font-primary;
+            //         text-transform: unset;
+            //         font-size: $font-size-10;
+            //         margin-bottom: $size / 5;
+            //         color: $brand-blue;
+            //     }
+
+            //     .input-icon {
+            //         border-bottom: 2px solid $grey-300;
+            //         height: $size * 2.5;
+            //         width: $size * 2.5;
+            //         display: flex;
+            //         justify-content: center;
+            //         // background-color: $brand-light;
+
+            //         align-items: center;
+
+            //         svg {
+            //             height: $size-20;
+
+            //             path,
+            //             rect,
+            //             circle {
+            //                 stroke: $brand-blue;
+            //             }
+            //         }
+            //     }
+
+            //     // .input-group {
+            //     //     width: 100%;
+
+            //     //     .focus-input {
+            //     //         position: absolute;
+            //     //         display: block;
+            //     //         width: 100%;
+            //     //         height: 100%;
+            //     //         top: 0;
+            //     //         left: 0;
+            //     //         pointer-events: none;
+
+            //     //         &::before {
+            //     //             content: "";
+            //     //             display: block;
+            //     //             position: absolute;
+            //     //             bottom: 0;
+            //     //             left: 0;
+            //     //             width: 0;
+            //     //             height: 2px;
+            //     //             transition: all 0.4s;
+            //     //             background-color: $brand-teal;
+            //     //         }
+
+            //     //         &::after {
+            //     //             font-size: $font-size-14;
+            //     //             color: $brand-blue;
+            //     //             line-height: 1.2;
+            //     //             content: attr(data-placeholder);
+            //     //             display: block;
+            //     //             width: 100%;
+            //     //             position: absolute;
+            //     //             top: $size / 2;
+            //     //             left: $size * 2.25;
+            //     //             padding-left: $size-10;
+            //     //             transition: all 0.4s;
+            //     //         }
+            //     //     }
+
+            //     //     .input-form {
+            //     //         color: $black;
+            //     //         font-size: $font-size-14;
+
+            //     //         &:focus {
+            //     //             &+.focus-input {
+            //     //                 &::after {
+            //     //                     top: -$size-20;
+            //     //                     font-size: $font-size-12;
+            //     //                 }
+
+            //     //                 &::before {
+            //     //                     width: 100%;
+            //     //                 }
+            //     //             }
+
+            //     //         }
+            //     //     }
+
+            //     //     .has-val.input-form+.focus-input::after {
+            //     //         top: -20px;
+            //     //         font-size: $font-size-12;
+            //     //     }
+
+            //     //     .has-val.input-form+.focus-input::before {
+            //     //         width: 100%;
+            //     //     }
+            //     // }
+            // }
+        }
+    }
+
+    // .panel-welcome {
+    //     position: absolute;
+    //     left: 20%;
+    //     height: 55vh;
+    //     width: 30vh;
+    //     background-image:
+    //         linear-gradient(to right bottom,
+    //             rgba($brand-blue, 0.5),
+    //             rgba($brand-blue, 0.9)),
+    //         url(assets/images/pattern.svg) !important;
+    //     background-color: $brand-teal;
+
+    // }
+
+}
+
+.btn-extension {
+    display: flex !important;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        width: 20%;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
     }
 }

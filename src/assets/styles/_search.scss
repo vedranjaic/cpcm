@@ -1,0 +1,42 @@
+.nav-tabs {
+    &.nav-tabs--tab {
+
+        li {
+            &.active {
+                a {
+                    // color: grey(400);
+                    color: rgba($brand-blue, .8);
+                    border-bottom: 3px solid $brand-blue;
+                    background-color: $white;
+                }
+            }
+
+            a {
+                @include transition(background-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: $size-10 $size;
+                text-decoration: none;
+                color: grey(300);
+                background-color: transparent;
+                border-bottom: 3px solid grey(300);
+                @include transition(all);
+
+                @include hover-focus {
+                    background-color: $white;
+                    border-bottom: 3px solid $brand-blue;
+                    color: rgba($brand-blue, .8);
+                }
+            }
+        }
+    }
+
+}
+
+.tab-content {
+    &.tab-content--search-box {
+        width: 70%;
+        margin: 0 auto;
+    }
+}

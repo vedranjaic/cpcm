@@ -1,0 +1,56 @@
+.navbar {
+    box-shadow: $box-shadow-panel;
+
+    .navbar-action {
+        .navbar-action--icon {
+            color: $grey-400;
+        }
+
+        &.app-shutdown {
+            // background-color: $red;
+            padding: 0 $size;
+
+            .app-shutdown--icon {
+                // color: $white;
+                color: $red;
+            }
+
+            &.app-language {}
+
+        }
+
+        &.user {
+            .dropdown-toggle {
+                // background-color: $grey-100;
+
+                &::after {
+                    content: none;
+                }
+
+                .user--name {
+                    font-size: $font-size-13;
+                    color: $grey-400;
+                }
+            }
+
+            .user--img {
+                font-size: $size + 0.5;
+                margin-left: $size / 2;
+                margin-right: 0;
+            }
+
+        }
+    }
+
+    .branding {
+        &.branding-header {
+            // padding: 0;
+            margin-left: $size;
+
+            .logo {
+                margin-right: $size / 2;
+            }
+        }
+
+    }
+}

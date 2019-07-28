@@ -1,6 +1,6 @@
 <nav class="navbar navbar-main">
 
-    <div class="branding">
+    <div class="branding branding-header">
         <div class="branding-index logo">
             <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -14,7 +14,7 @@
                C379.278,234.529,400.696,214.598,400.696,190.009z"/>
            </svg> -->
             <!-- <span>CPCM</span> -->
-            <a href="index.html">Albanian Central Portal for <br>Control and Management</a>
+            <a href="/">Albanian Central Portal for <br>Control and Management</a>
             <!-- <svg version="1.1" id="logo-open" class="logo logo-open" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 549.599 91.307"
                 xml:space="preserve">
@@ -113,7 +113,8 @@
     <ul class="navbar-actions list-inline">
         <li class="navbar-action dropdown">
             <a href="#" class="dropdown-toggle" data-type="notification">
-                <i class="navbar-action--icon fa fa-bell" data-notification="7" aria-hidden="true"></i>
+                <!-- <i class="navbar-action--icon fa fa-bell-o" data-notification="7" aria-hidden="true"></i> -->
+                <i class="navbar-action--icon ti-bell" data-notification="7"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu--right animate">
                 <li>
@@ -123,8 +124,9 @@
         </li>
         <li class="navbar-action user dropdown">
             <a href="#" class="dropdown-toggle">
-                <i class="navbar-action--icon user--img fa fa-user-circle-o" aria-hidden="true"></i>
+                <!-- <i class="navbar-action--icon user--img fa fa-user-circle-o" aria-hidden="true"></i> -->
                 <span class="user--name">Dijana Savin</span>
+                <i class="navbar-action--icon user--img ti-pencil-alt"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu--right animate">
                 <li>
@@ -133,35 +135,22 @@
                 <li>
                     <a href="#">Settings</a>
                 </li>
-                <li class="separator"></li>
+                <!-- <li class="separator"></li>
                 <li>
                     <a href="#">Log out</a>
-                </li>
+                </li> -->
             </ul>
         </li>
-    </ul>
-
-
-
-
-
-    <div class="navbar-actions hidden">
-
-        <div class="user dropdown">
-            <a href="#" class="dropdown-toggle">
-                <i class="icon user--img fa fa-user-o" aria-hidden="true"></i>
-                <span class="user--name">Davorin Capan</span>
+        <li class="navbar-action app-language">
+            <a href="#" class="">
+                EN
             </a>
-            <ul class="dropdown-menu dropdown-menu--right">
-                <li>
-                    <a href="#">Logout</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.user -->
-
-    </div>
-    <!-- /.navbar-actions -->
-
+        </li>
+        <li class="navbar-action app-shutdown">
+            <a href="#" class="">
+                <i class="navbar-action--icon app-shutdown--icon ti-power-off"></i>
+            </a>
+        </li>
+    </ul>
 </nav>
 <!-- /.navbar -->

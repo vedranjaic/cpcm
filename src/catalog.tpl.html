@@ -15,19 +15,19 @@
 
 	<div class="content-container">
 		@@include('assets/components/page/_sidebar-menu.html',{
-		"classActiveProfile": "active"
+		"classActiveCatalog": "active"
 		})
 
 		<div class="content">
-			@@include('assets/components/page/_page-header--info.html')
-			<!-- @@include('assets/components/page/_panel-header-info.html',{
+
+			<div class="page-content">
+				@@include('assets/components/page/_page-header--info.html')
+				<!-- @@include('assets/components/page/_panel-header-info.html',{
 					"panel-header-info-all" : "hidden"
 					}) -->
-			@@include('assets/components/_navbar-tabs.html', {
-			"classActiveProfile" : "active"
-			})
-			<div class="page-content">
-
+				@@include('assets/components/_navbar-tabs.html', {
+				"classActiveProfile" : "active"
+				})
 
 				<section class="panel panel-page">
 
@@ -36,8 +36,7 @@
 
 						<ul class="panel-header--actions list-inline">
 							<li>
-								<a href="#" class="btn btn-brand-blue"><i class="icon ti-download"></i> Export to
-									.xls</a>
+								<a href="#" class="btn btn-dark"><i class="icon fa fa-download"></i> Export to .xls</a>
 							</li>
 						</ul>
 					</header>
@@ -63,7 +62,7 @@
 
 						<ul class="panel-header--actions panel-header--actions-height list-inline">
 							<li>
-								<a href="#" class="btn btn-primary"><i class="icon ti-plus"></i> Add new</a>
+								<a href="#" class="btn btn-primary"><i class="icon fa fa-fw fa-plus"></i> Add new</a>
 							</li>
 
 						</ul>

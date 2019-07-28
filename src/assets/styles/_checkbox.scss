@@ -1,0 +1,62 @@
+input[type=checkbox] {
+
+	&+label {
+		position: relative;
+
+		&::before {
+			@include transition(color);
+			content: "\e6e8" !important;
+			font-family: 'themify' !important;
+			color: $brand-blue-400 !important;
+			font-size: $size;
+
+		}
+
+		@include hover-focus {
+			cursor: pointer;
+
+			&::before {
+				color: $brand-blue !important;
+			}
+		}
+	}
+
+	// Checked styles
+	&:checked {
+		&+label {
+			color: $brand-blue;
+
+			// Checkbox
+			&::before {
+				content: "\e6e8" !important;
+				// content: "\e64d" !important;
+				// content: "" !important;
+				color: $brand-blue-400 !important;
+				background-color: $brand-blue-400;
+				// font-family: 'themify' !important;
+				// width: 5px;
+				// height: 3px;
+				// transform: rotate(45deg);
+				// font-size: $size * 1.15;
+				// padding: $size / 3;
+				// background-color: rgba($brand-blue-400, 0.2%);
+				// border-radius: 50%;
+			}
+
+			&::after {
+				content: "" !important;
+				position: absolute;
+				left: 6px;
+				top: 2px;
+				width: 3px;
+				height: 8px;
+				border: solid $white;
+				// border: solid $brand-blue;
+				border-width: 0 2px 2px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
